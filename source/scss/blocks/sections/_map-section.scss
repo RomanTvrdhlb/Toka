@@ -1,0 +1,115 @@
+@use "../../mixins/breakpoint" as *;
+
+.map-section{
+  padding: var(--default-padding) 0 clamp(36px, 5.46875vw, 70px);
+  overflow: hidden;
+
+  .top{
+	align-items: flex-start;
+	gap: clamp(16px, 2.5vw, 32px);
+	max-width: 320px;
+
+	p,.title-main{
+	  text-align: start;
+	}
+	.title-main{
+
+	}
+
+	p{
+	  color:var(--cl-g);
+	  font-size: 16px;
+	}
+
+	.action-btn{
+	  margin-top: 8px;
+
+	  @include small-tablet{
+		margin-top: 16px;
+	  }
+	}
+  }
+
+  &__bg {
+	display: flex;
+	position: absolute;
+	z-index: -2;
+	pointer-events: none;
+	inset: 0;
+
+	img, picture {
+	  width: 100%;
+	  height: 100%;
+	}
+  }
+
+  &__image{
+	display: flex;
+	position: absolute;
+	z-index: 1;
+	pointer-events: none;
+	width: clamp(400px, 44.84375vw, 574px);
+	height: clamp(300px, 33.984375vw, 435px);
+	right: clamp(16px, 4.21875vw, 54px);
+	bottom: 0;
+
+	img, picture {
+	  width: 100%;
+	  height: 100%;
+	}
+
+	@include tablet{
+	  right: 16px;
+	}
+
+	@include small-tablet{
+	  height: auto;
+
+	  width: 100%;
+	  max-width: 450px;
+	}
+
+	@include mobile{
+	  right: initial;
+	  left: 50%;
+	  transform: translateX(-50%);
+	}
+  }
+  &__box{
+	display: flex;
+	flex-direction: column;
+	gap: 32px;
+	border-radius: 20px;
+	overflow: hidden;
+	padding: clamp(32px, 4.6875vw, 60px) clamp(24px, 4.6875vw, 60px);
+	position: relative;
+	z-index: 1;
+	min-height: clamp(400px, 36.875vw, 472px);
+
+	&:before{
+	  content: '';
+	  width: 50%;
+	  min-width: 640px;
+	  background: linear-gradient(270deg, rgba(233, 238, 245, 0.00) 0%, #E9EEF5 100%);
+	  height: 100%;
+	  z-index: -1;
+	  left: 0;
+	  bottom: 0;
+	  pointer-events: none;
+	  position: absolute;
+
+	  @include small-tablet{
+		background: linear-gradient(0deg, rgba(233, 238, 245, 0.00) 0%, #E9EEF5 100%);
+		min-width: 100%;
+		height: 409px;
+		top: 0;
+		bottom: initial;
+	  }
+	}
+
+	@include small-tablet{
+	  min-height: 672px;
+	}
+
+  }
+}

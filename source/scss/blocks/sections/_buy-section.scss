@@ -1,0 +1,104 @@
+@use "../../mixins/breakpoint" as *;
+
+.buy-section {
+  padding: var(--default-padding) 0;
+
+  &__tabs {
+	display: flex;
+	justify-content: center;
+	gap: 5px;
+	margin-top: clamp(8px, 1.25vw, 16px);
+
+	.buy-section-btn {
+	  border: none;
+	  background: transparent;
+	  display: flex;
+	  align-items: center;
+	  gap: 10px;
+	  font-family: var(--second-family);
+	  font-weight: 500;
+	  font-size: 16px;
+	  line-height: 147%;
+	  color: #62646a;
+	  padding: 10px 21px;
+	  border-radius: 34px;
+	  transition: 0.23s;
+	  text-align: left;
+	  height: 47px;
+	  white-space: nowrap;
+
+	  &:hover {
+		background: rgba(37, 40, 52, 0.04);
+	  }
+
+	  &.active {
+		background: var(--content-primary);
+		color: var(--content-alternative);
+
+		svg {
+		  path {
+			fill: white;
+		  }
+		}
+	  }
+	}
+
+	@include mobile{
+	  width: calc(100% + (var(--container-offset) * 2));
+	  overflow-x: scroll;
+	  justify-content: flex-start;
+	  margin-left: calc(-1 * var(--container-offset));
+	  padding: 0 var(--container-offset);
+	}
+  }
+
+  &__box {
+	display: flex;
+	flex-direction: column;
+	gap: 32px;
+
+	.top{
+	  max-width: 680px;
+	  width: 100%;
+	  align-self: center;
+	}
+
+	& > .action-btn{
+	  align-self: center;
+	}
+  }
+
+  &__cards {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: clamp(16px, 1.875vw, 24px);
+
+	@include for-tablet{
+	  .product-card__image{
+		height: clamp(220px, 24.0625vw, 308px);
+	  }
+	}
+
+	&::-webkit-scrollbar {
+	  display: none;
+	}
+
+	@include tablet{
+	  gap: 16px;
+	  scroll-behavior: smooth;
+	  scroll-snap-type: x mandatory;
+	  scroll-padding-left: var(--container-offset);
+	  overflow-x: auto;
+	  width: calc(100% + (var(--container-offset) * 2));
+	  margin-left: calc(var(--container-offset) * -1);
+	  padding: 0 var(--container-offset);
+	}
+  }
+
+  .product-card{
+	@include tablet{
+	  width: 300px;
+	  scroll-snap-align: start;
+	}
+  }
+}

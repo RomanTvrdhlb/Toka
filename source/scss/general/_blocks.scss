@@ -1,0 +1,32 @@
+
+@use "../blocks/header"; 
+@use "../blocks/sections/hero-section";
+
+@use "../blocks/footer"; 
+
+
+@use "../blocks/mobile-menu"; 
+@use "../blocks/modals";
+
+
+
+@use "../blocks/sections/companies-section";
+@use "../blocks/sections/join-us-section";
+@use "../blocks/sections/seoblock-section";
+@use "../blocks/sections/faq-section";
+@use "../blocks/sections/blog-section";
+@use "../blocks/sections/section-app";
+@use "../blocks/sections/buy-section";
+@use "../blocks/sections/contact-section";
+@use "../blocks/sections/charging-section";
+@use "../blocks/sections/list-section";
+@use "../blocks/sections/how-section";
+@use "../blocks/sections/scope-section";
+@use "../blocks/sections/map-section";
+@use "../blocks/sections/bonus-section";
+@use "../blocks/sections/storage-section";
+@use "../blocks/sections/advantages-section";
+@use "../blocks/sections/team-section";
+@use "../blocks/sections/history-section";
+@use "../blocks/sections/power-section";
+@use "../blocks/sections/metrics-section.scss";

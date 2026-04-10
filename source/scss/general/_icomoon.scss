@@ -1,0 +1,404 @@
+@font-face {
+	font-family: "iconmoon";
+	src: url('../fonts/iconmoon.eot');
+	src: url('../fonts/iconmoon.eot?#iefix') format('eot'),
+		url('../fonts/iconmoon.woff2') format('woff2'),
+		url('../fonts/iconmoon.woff') format('woff'),
+		url('../fonts/iconmoon.ttf') format('truetype'),
+		url('../fonts/iconmoon.svg#iconmoon') format('svg');
+}
+
+@mixin icon-styles {
+	font-family: "iconmoon";
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	// speak: none; // only necessary if not using the private unicode range (firstGlyph option)
+	text-decoration: none;
+	text-transform: none;
+}
+
+%icon {
+	@include icon-styles;
+}
+
+@function icon-char($filename) {
+	$char: "";
+
+	@if $filename == arrow-up-black {
+		$char: "\E001";
+	}
+	@if $filename == bn1 {
+		$char: "\E002";
+	}
+	@if $filename == bn2 {
+		$char: "\E003";
+	}
+	@if $filename == bn3 {
+		$char: "\E004";
+	}
+	@if $filename == chargeavatar {
+		$char: "\E005";
+	}
+	@if $filename == checkboxi {
+		$char: "\E006";
+	}
+	@if $filename == checkedic {
+		$char: "\E007";
+	}
+	@if $filename == ci_timer {
+		$char: "\E008";
+	}
+	@if $filename == clarity_clock-solid {
+		$char: "\E009";
+	}
+	@if $filename == clarity_connect {
+		$char: "\E00A";
+	}
+	@if $filename == facebook-dark {
+		$char: "\E00B";
+	}
+	@if $filename == facebook {
+		$char: "\E00C";
+	}
+	@if $filename == fire {
+		$char: "\E00D";
+	}
+	@if $filename == fishka {
+		$char: "\E00E";
+	}
+	@if $filename == flash {
+		$char: "\E00F";
+	}
+	@if $filename == home {
+		$char: "\E010";
+	}
+	@if $filename == ic_round-close {
+		$char: "\E011";
+	}
+	@if $filename == icarr {
+		$char: "\E012";
+	}
+	@if $filename == icchrg {
+		$char: "\E013";
+	}
+	@if $filename == icons_search {
+		$char: "\E014";
+	}
+	@if $filename == icremove {
+		$char: "\E015";
+	}
+	@if $filename == instagram-dark {
+		$char: "\E016";
+	}
+	@if $filename == instagram {
+		$char: "\E017";
+	}
+	@if $filename == lets-icons_money-fill {
+		$char: "\E018";
+	}
+	@if $filename == link-ic-dark {
+		$char: "\E019";
+	}
+	@if $filename == link-ic {
+		$char: "\E01A";
+	}
+	@if $filename == linkedin-dark {
+		$char: "\E01B";
+	}
+	@if $filename == linkedin {
+		$char: "\E01C";
+	}
+	@if $filename == logos_google-maps {
+		$char: "\E01D";
+	}
+	@if $filename == mapmapmin {
+		$char: "\E01E";
+	}
+	@if $filename == material-symbols_electric-bolt-rounded {
+		$char: "\E01F";
+	}
+	@if $filename == mdi_filter {
+		$char: "\E020";
+	}
+	@if $filename == mdi_linkedin {
+		$char: "\E021";
+	}
+	@if $filename == mi1 {
+		$char: "\E022";
+	}
+	@if $filename == mi2 {
+		$char: "\E023";
+	}
+	@if $filename == mi3 {
+		$char: "\E024";
+	}
+	@if $filename == mingcute_search-line {
+		$char: "\E025";
+	}
+	@if $filename == mnu-arr-white {
+		$char: "\E026";
+	}
+	@if $filename == mnu-arr {
+		$char: "\E027";
+	}
+	@if $filename == ms1 {
+		$char: "\E028";
+	}
+	@if $filename == ms2 {
+		$char: "\E029";
+	}
+	@if $filename == ms3 {
+		$char: "\E02A";
+	}
+	@if $filename == ms4 {
+		$char: "\E02B";
+	}
+	@if $filename == ph_clock-fill {
+		$char: "\E02C";
+	}
+	@if $filename == search-gray {
+		$char: "\E02D";
+	}
+	@if $filename == star-0 {
+		$char: "\E02E";
+	}
+	@if $filename == star-1 {
+		$char: "\E02F";
+	}
+	@if $filename == telegram {
+		$char: "\E030";
+	}
+	@if $filename == tt {
+		$char: "\E031";
+	}
+	@if $filename == uil_arrow-right {
+		$char: "\E032";
+	}
+	@if $filename == uil_arrow-up {
+		$char: "\E033";
+	}
+	@if $filename == uil_check-dark {
+		$char: "\E034";
+	}
+	@if $filename == uil_check {
+		$char: "\E035";
+	}
+	@if $filename == w_1 {
+		$char: "\E036";
+	}
+	@if $filename == w_2 {
+		$char: "\E037";
+	}
+	@if $filename == w_3 {
+		$char: "\E038";
+	}
+	@if $filename == w_4 {
+		$char: "\E039";
+	}
+	@if $filename == wpf_online {
+		$char: "\E03A";
+	}
+	@if $filename == youtube-dark {
+		$char: "\E03B";
+	}
+	@if $filename == youtube {
+		$char: "\E03C";
+	}
+
+	@return $char;
+}
+
+@mixin icon($filename, $insert: before, $extend: true) {
+	&:#{$insert} {
+		@if $extend {
+			@extend %icon;
+		} @else {
+			@include icon-styles;
+		}
+		content: icon-char($filename);
+	}
+}
+
+.icon-arrow-up-black {
+	@include icon(arrow-up-black);
+}
+.icon-bn1 {
+	@include icon(bn1);
+}
+.icon-bn2 {
+	@include icon(bn2);
+}
+.icon-bn3 {
+	@include icon(bn3);
+}
+.icon-chargeavatar {
+	@include icon(chargeavatar);
+}
+.icon-checkboxi {
+	@include icon(checkboxi);
+}
+.icon-checkedic {
+	@include icon(checkedic);
+}
+.icon-ci_timer {
+	@include icon(ci_timer);
+}
+.icon-clarity_clock-solid {
+	@include icon(clarity_clock-solid);
+}
+.icon-clarity_connect {
+	@include icon(clarity_connect);
+}
+.icon-facebook-dark {
+	@include icon(facebook-dark);
+}
+.icon-facebook {
+	@include icon(facebook);
+}
+.icon-fire {
+	@include icon(fire);
+}
+.icon-fishka {
+	@include icon(fishka);
+}
+.icon-flash {
+	@include icon(flash);
+}
+.icon-home {
+	@include icon(home);
+}
+.icon-ic_round-close {
+	@include icon(ic_round-close);
+}
+.icon-icarr {
+	@include icon(icarr);
+}
+.icon-icchrg {
+	@include icon(icchrg);
+}
+.icon-icons_search {
+	@include icon(icons_search);
+}
+.icon-icremove {
+	@include icon(icremove);
+}
+.icon-instagram-dark {
+	@include icon(instagram-dark);
+}
+.icon-instagram {
+	@include icon(instagram);
+}
+.icon-lets-icons_money-fill {
+	@include icon(lets-icons_money-fill);
+}
+.icon-link-ic-dark {
+	@include icon(link-ic-dark);
+}
+.icon-link-ic {
+	@include icon(link-ic);
+}
+.icon-linkedin-dark {
+	@include icon(linkedin-dark);
+}
+.icon-linkedin {
+	@include icon(linkedin);
+}
+.icon-logos_google-maps {
+	@include icon(logos_google-maps);
+}
+.icon-mapmapmin {
+	@include icon(mapmapmin);
+}
+.icon-material-symbols_electric-bolt-rounded {
+	@include icon(material-symbols_electric-bolt-rounded);
+}
+.icon-mdi_filter {
+	@include icon(mdi_filter);
+}
+.icon-mdi_linkedin {
+	@include icon(mdi_linkedin);
+}
+.icon-mi1 {
+	@include icon(mi1);
+}
+.icon-mi2 {
+	@include icon(mi2);
+}
+.icon-mi3 {
+	@include icon(mi3);
+}
+.icon-mingcute_search-line {
+	@include icon(mingcute_search-line);
+}
+.icon-mnu-arr-white {
+	@include icon(mnu-arr-white);
+}
+.icon-mnu-arr {
+	@include icon(mnu-arr);
+}
+.icon-ms1 {
+	@include icon(ms1);
+}
+.icon-ms2 {
+	@include icon(ms2);
+}
+.icon-ms3 {
+	@include icon(ms3);
+}
+.icon-ms4 {
+	@include icon(ms4);
+}
+.icon-ph_clock-fill {
+	@include icon(ph_clock-fill);
+}
+.icon-search-gray {
+	@include icon(search-gray);
+}
+.icon-star-0 {
+	@include icon(star-0);
+}
+.icon-star-1 {
+	@include icon(star-1);
+}
+.icon-telegram {
+	@include icon(telegram);
+}
+.icon-tt {
+	@include icon(tt);
+}
+.icon-uil_arrow-right {
+	@include icon(uil_arrow-right);
+}
+.icon-uil_arrow-up {
+	@include icon(uil_arrow-up);
+}
+.icon-uil_check-dark {
+	@include icon(uil_check-dark);
+}
+.icon-uil_check {
+	@include icon(uil_check);
+}
+.icon-w_1 {
+	@include icon(w_1);
+}
+.icon-w_2 {
+	@include icon(w_2);
+}
+.icon-w_3 {
+	@include icon(w_3);
+}
+.icon-w_4 {
+	@include icon(w_4);
+}
+.icon-wpf_online {
+	@include icon(wpf_online);
+}
+.icon-youtube-dark {
+	@include icon(youtube-dark);
+}
+.icon-youtube {
+	@include icon(youtube);
+}

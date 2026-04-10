@@ -1,0 +1,83 @@
+@use "../../mixins/breakpoint" as *;
+
+.companies-section {
+  padding: var(--default-padding) 0;
+  overflow: hidden;
+
+  &__line {
+	display: flex;
+	flex-wrap: nowrap;
+	gap: 16px;
+	width: max-content;
+
+	animation: scroll-left 60s linear infinite;
+	will-change: transform;
+
+	&.line-right {
+	  animation: scroll-right 60s linear infinite;
+	}
+
+	&:first-of-type {
+	  margin-bottom: 16px;
+
+	  @include small-tablet {
+		margin-bottom: 8px;
+	  }
+	}
+
+	@include small-tablet {
+	  gap: 8px;
+	}
+  }
+
+  .companies-track {
+	display: flex;
+	gap: 16px;
+  }
+
+  .companies-track__item {
+	flex: 0 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 202px;
+	height: 84px;
+	padding: 15px;
+	border-radius: 10px;
+	background: var(--cl-f);
+
+	img {
+	  max-width: 100%;
+	  height: auto;
+	  max-height: 44px;
+	  object-fit: contain;
+
+	  @include small-tablet {
+		max-height: 18px;
+	  }
+	}
+
+	@include small-tablet {
+	  width: 154px;
+	  height: 64px;
+	}
+  }
+
+  @keyframes scroll-left {
+	0% {
+	  transform: translateX(0);
+	}
+	100% {
+	  transform: translateX(-50%);
+	}
+  }
+
+  @keyframes scroll-right {
+	0% {
+	  transform: translateX(-50%);
+	}
+	100% {
+	  transform: translateX(0);
+	}
+  }
+}

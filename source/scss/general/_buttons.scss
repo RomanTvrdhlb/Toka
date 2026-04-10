@@ -1,0 +1,259 @@
+@use "../mixins/breakpoint" as *;
+@use "../mixins/disable-mob-hover" as *;
+
+.slider-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+  border: 1px solid var(--cl-e);
+  background: var(--content-primary);
+  width: 46px;
+  height: 46px;
+  transition: 0.23s;
+
+  .sprite {
+	color: var(--cl-b);
+	width: 12px;
+	height: 12px;
+	display: flex;
+
+	svg {
+	  transition: all .3s;
+	  width: 100%;
+	  height: 100%;
+	}
+  }
+
+  &.next {
+	.sprite {
+	  transform: scaleX(-1);
+	}
+  }
+
+  &:hover {
+	background: var(--cl-d);
+  }
+}
+
+.link-more {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  border-radius: 104px;
+
+  padding: 4px 21px 4px 5px;
+
+  transition: 0.23s;
+
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  text-align: center;
+  color: var(--content-primary);
+
+  &__ic {
+	background: var(--content-alternative);
+
+	border: 1px solid #d3dce0;
+	border-radius: 61px;
+	width: 46px;
+	height: 46px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: 0.23s;
+  }
+
+  &--round {
+	background: var(--content-alternative);
+	border-radius: 100%;
+	width: 54px;
+	height: 54px;
+	padding: 5px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: 0.3s;
+
+	.sprite {
+	  transition: all .3s;
+	  color: var(--cl-c);
+	  margin-top: -3px;
+	  width: 20px;
+	  height: 20px;
+	  display: flex;
+	}
+
+	&:hover{
+	  background: var(--content-alternative) !important;
+
+	  .sprite{
+		rotate: -45deg;
+	  }
+	}
+  }
+
+  &:hover {
+	background: var(--cl-d);
+	color: var(--cl-b);
+
+	.link-more__ic {
+	  transform: rotate(-90deg);
+	}
+  }
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 54px;
+  height: 54px;
+  border-radius: 100%;
+  transition: all 0.3s;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  text-align: center;
+  color: var(--content-primary);
+  background: var(--cl-b);
+
+  .sprite {
+	color: var(--cl-c);
+	width: 24px;
+	height: 24px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	svg {
+	  width: 16px;
+	}
+  }
+
+  &:hover {
+	background: var(--cl-d);
+	color: var(--cl-b);
+
+	.sprite {
+	  color: var(--cl-b);
+	}
+  }
+}
+
+.action-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  text-align: center;
+  color: var(--content-primary);
+  box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.1);
+  background: var(--content-alternative);
+  padding: 4px 21px;
+  border-radius: 104px;
+  cursor: pointer;
+  border: none;
+  width: fit-content;
+  border: 1px solid #D3DCE0;
+  height: 54px;
+  transition: 0.23s;
+
+  &__ic {
+	background: var(--content-alternative);
+
+	border: 1px solid #d3dce0;
+	border-radius: 61px;
+	width: 46px;
+	height: 46px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	svg {
+	  path {
+		transition: 0.23s;
+	  }
+	}
+  }
+
+  &:hover {
+	background: #1e558e;
+	border-color: #1e558e;
+	color: #fff;
+
+	.action-btn__ic {
+	  border-color: #fff;
+
+	  svg {
+		path {
+		  stroke: #1E558E;
+		}
+	  }
+	}
+  }
+}
+
+.action-btn-v4 {
+  background: transparent;
+  border-color: var(--cl-c);
+  color: var(--cl-c);
+  box-shadow: none;
+
+  &:hover {
+	background: var(--cl-c);
+	color: var(--cl-b);
+  }
+}
+
+.action-btn-v2 {
+  background: var(--cl-c);
+  color: var(--cl-b);
+  border-color: var(--cl-c);
+
+  .action-btn__ic {
+	border-color: var(--cl-b);
+	transition: 0.23s;
+
+	svg {
+	  path {
+		stroke: none !important;
+		fill: var(--cl-c);
+	  }
+	}
+  }
+
+  &:hover {
+	color: var(--content-primary);
+	background: var(--content-alternative);
+
+	.action-btn__ic {
+	  border: 1px solid var(--cl-e);
+
+	  transform: rotate(-90deg);
+	}
+  }
+}
+
+.action-btn-v3 {
+  border-color: #EBF0F2;
+  background: #F1F4F6;
+  box-shadow: none;
+  color: var(--content-primary);
+
+  &:hover {
+	background: var(--cl-d);
+	border-color: var(--cl-d);
+	color: var(--cl-b);
+  }
+}
+
+
+

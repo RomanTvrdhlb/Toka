@@ -1,0 +1,137 @@
+@use "../mixins/breakpoint" as *;
+
+:root {
+  // --------------- default global variables ---------------
+  --frame-width: 1920;
+  --rem-function: 16px;
+
+  //--rem-function: calc(100vw / var(--frame-width));
+
+  --error-bg: #d01f1f;
+  --body-bg: #fff;
+  --body-font-size: 16px;
+  --content-width: 1280px;
+  --content-width-mode: 1920px;
+  --container-offset: clamp(16px, 4.6875vw, 60px);
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+  --container-width-mode: calc(
+    var(--content-width-mode) + (var(--container-offset) * 2)
+  );
+
+  --default-padding: clamp(28px, 3.90625vw, 50px);
+
+  @include tablet {
+    --container-offset: 16px;
+  }
+
+  // --------------- default JS variables ---------------
+
+  --header-height: 56px;
+  --btn-size: clamp(40px, 6.52vw, 57px);
+
+  // --------------- default scroll variables ---------------
+  --scrollbar-thumb: #1397d6;
+
+  // --scrollbar-thumb-hover: #00aff0;
+  --scrollbar-track: rgba(0, 0, 0, 0.07);
+  --scrollbar-track-hover: transparent;
+  --overlay-bg: rgba(0, 0, 0, 0.5);
+
+  // --------------- default select variables ---------------
+  --select-inner-bg: #404040;
+  --select-inner-border: #fdfdfd;
+  --select-focus-border: #fdfdfd;
+  --main-button-size: 50px;
+
+  // --------------- default font-family variables ---------------
+
+  //--font-family: "Arial"; // var(--font-family);
+  //--second-family: "Inter", sans-serif; // var(--second-family);
+  //--third-family: "SFPro", sans-serif; // var(--third-family);
+  //--font3: "ArialHebrew", sans-serif;
+  //--font4: "AppleBraille", sans-serif;
+  //--font5: "Montserrat", sans-serif;
+  //--font6: "GowunDodum", sans-serif;
+  //--font7: "MonteCarlo", sans-serif;
+  //--font8: "Halvar", sans-serif;
+
+  --font-family: "Manrope", sans-serif;
+  --second-family: "Gilroy", sans-serif;
+  --third-family: "Unbounded", sans-serif;
+  --font3: "Poppins", sans-serif;
+  --font4: "HelveticaNeueCyr", sans-serif;
+
+  //---------------- default ------------------------------------
+  --content-alternative: #fff;
+  --content-primary: #252834;
+  --content-secondary: #737a96;
+  --content-tertiary: rgba(115, 122, 150, 0.6);
+  --content-attention: #fa4145;
+  --content-accent: #3966ad;
+  --content-attention-2: #00b633;
+  --background-screen: #f5f7fb;
+  --background-elevated-0: #fff;
+  --background-elevated-10: #ebf0f7;
+  --background-elevated-20: #d7e0ef;
+  --background-elevated-30: #b0c2de;
+  --background-elevated-40: #88a3ce;
+  --background-elevated-50: #6185bd;
+  --stroke-neutral: #e6eef2;
+  --categories-charged: #f4efd5;
+  --categories-co2: #efd9df;
+  --categories-corporate-client: #8d90ec;
+  --categories-leaderboard: #e6eef2;
+  --categories-overcome: #e1dcec;
+  --port-available: #eba92a;
+  --port-busy: #cbdc05;
+  --port-charging: #34c380;
+  --port-not-work: #ef555d;
+  --border-icon: #3661BC;
+
+  // --------------- default text color variables ---------------
+  --cl-a: #000000; // var(--cl-a);
+  --cl-b: #ffffff; // var(--cl-b);
+  --cl-c: #0071E3; // var(--cl-c);
+  --cl-d: #1e558e; // var(--cl-d);
+  --cl-e: #d3dce0; // var(--cl-e);
+  --cl-f: #F9FAFC; // var(--cl-f);
+  --cl-g: #62646a; // var(--cl-g);
+  --cl-h: #464e5f; // var(--cl-h);
+  --cl-i: #d3dce0; // var(--cl-i);
+  --cl-j: #a7acc2; // var(--cl-j);
+  --cl-k: #222; // var(--cl-k);
+  --cl-l: #1B1B1B; // var(--cl-l);
+  --cl-m: #0E0E0E; // var(--cl-m);
+  --cl-n: #E5EBF9; // var(--cl-n);
+  --cl-o:#E9F4FB; // var(--cl-o);
+  --cl-p: #E0E3E9; // var(--cl-p);
+  --cl-q: #171D24; // var(--cl-q);
+
+
+  --cl-r: #cacaca; // var(--cl-r);
+  --cl-s: #534343; // var(--cl-s);
+  --cl-t: #d8d9d2; // var(--cl-t);
+  --cl-u: #464646; // var(--cl-u);
+  --cl-v: #3d3d3d; // var(--cl-v);
+  --cl-w: #a5a5a5; // var(--cl-w);
+  --cl-x: #8e8d8d; // var(--cl-x);
+  --cl-y: #e2e2e2; // var(--cl-y);
+  --cl-z: #898989; // var(--cl-z);
+
+
+  // --------------- default gradient color variable ---------------
+  --gr-a: linear-gradient(246deg, #0E0E0E 2.24%, #1C1D1D 67.82%, #0E0E0E 100%); // var(--gr-a);
+  --gr-b:  linear-gradient(176deg, #797979 34.38%, #FFF 99.42%);
+  --gr-c: linear-gradient(180deg, #E9EEF5 0%, #F5F6FA 100%);
+
+
+  --gr-d: linear-gradient(135deg, #eb001b, #f79e1b);
+  //-----------------custom loader----------------------------------
+  --loader: linear-gradient(
+    90deg,
+    rgba(108, 214, 133, 1) 0%,
+    rgba(255, 255, 255, 1) 45%,
+    rgba(255, 255, 255, 1) 55%,
+    rgba(9, 146, 196, 1) 100%
+  ); // var(--loader);
+}

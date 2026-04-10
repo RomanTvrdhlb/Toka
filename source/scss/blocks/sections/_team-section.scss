@@ -1,0 +1,90 @@
+@use "../../mixins/breakpoint" as *;
+@use "../../mixins/mini" as *;
+
+.team-section{
+  padding: var(--default-padding) 0 clamp(36px, 5.46875vw, 70px);
+  overflow: hidden;
+
+  &__box{
+	display: flex;
+	flex-direction: column;
+	gap: 32px;
+	border-radius: 20px;
+	overflow: hidden;
+	height: clamp(500px, 54.6875vw, 700px);
+	padding: clamp(24px, 3.125vw, 40px) clamp(24px, 3.75vw, 48px) clamp(24px, 3.75vw, 48px);
+	position: relative;
+	overflow: hidden;
+	z-index: 1;
+	justify-content: space-between;
+
+	&:before, &:after{
+	  content: '';
+	  width: 100%;
+	  z-index: -1;
+	  left: 0;
+	  pointer-events: none;
+	  position: absolute;
+	  background: linear-gradient(180deg, #131313 0%, rgba(19, 19, 19, 0.00) 100%);
+	}
+
+	&:before{
+	  top: 0;
+	  height:  clamp(130px, 13.90625vw, 178px);
+	}
+
+	&:after{
+	  height: 216px;
+	  background: linear-gradient(180deg, rgba(19, 19, 19, 0.00) 0%, #131313 100%);
+	  bottom: 0;
+	}
+
+  }
+
+  &__image{
+	position: absolute;
+	z-index: -2;
+	inset: 0;
+	pointer-events: none;
+
+	img,picture{
+	  width: 100%;
+	  height: 100%;
+	}
+  }
+
+  &__label{
+	color: var(--cl-b);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 14px;
+	font-style: normal;
+	width: fit-content;
+	font-weight: 500;
+	line-height: normal;
+	padding: 10px;
+	gap: 5px;
+	height: 30px;
+	border-radius: 28px;
+	background: rgba(255, 255, 255, 0.10);
+
+	&:before{
+	  width: 4px;
+	  height: 4px;
+	  background: var(--cl-b);
+	  display: block;
+	  border-radius: 100%;
+	}
+  }
+
+  &__title{
+	color: var(--cl-b);
+	font-family: var(--third-family);
+	font-size: clamp(22px, 2.8125vw, 36px);
+	font-style: normal;
+	font-weight: 500;
+	line-height: 138%;
+	max-width: clamp(554px, 58.90625vw, 754px);
+  }
+}

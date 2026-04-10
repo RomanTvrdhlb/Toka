@@ -1,0 +1,29 @@
+
+.charging-slider{
+width: 100%;
+  overflow: initial;
+
+
+  &__image{
+	width: 100%;
+	height: 100%;
+
+	img,picture{
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+  }
+
+  .swiper{
+
+	&-slide{
+	  width: clamp(327px, 38.671875vw, 495px);
+	  height: clamp(366px, 43.359375vw, 555px);
+	  aspect-ratio: 33/37;
+	  border-radius: 20px;
+	  overflow: hidden;
+	  flex-shrink: 0;
+	}
+  }
+}

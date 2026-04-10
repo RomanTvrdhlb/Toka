@@ -1,0 +1,49 @@
+@use "../../mixins/breakpoint" as *;
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 482px;
+  width: 100%;
+  align-self: center;
+
+  .action-btn{
+	margin-top: 24px;
+	align-self: center;
+  }
+
+  .input-item {
+	input {
+	  font-family: var(--font-family);
+	  font-weight: 400;
+	  font-size: 16px;
+	  color: var(--content-primary);
+	  height: 62px;
+	  text-indent: 20px;
+
+	  &::placeholder {
+		color: #62646A;
+		opacity: .8;
+	  }
+
+	  border: 1px solid transparent;
+	  border-radius: 16px;
+	  background: var(--cl-b);
+
+	  &:focus{
+		border-color: var(--cl-c);
+	  }
+	}
+  }
+
+  .input-item {
+	textarea {
+	  height: 187px;
+	}
+  }
+
+  .checkbox {
+	margin-top: 8px;
+  }
+}

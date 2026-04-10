@@ -1,0 +1,255 @@
+@use "../../mixins/breakpoint" as *;
+
+.join-us-section {
+  padding-bottom: clamp(25px, 5.333vw, 50px);
+
+  &__box {
+	display: flex;
+	gap: 16px;
+
+	@include small-tablet {
+	  flex-direction: column;
+	}
+  }
+
+  &__title {
+	max-width: 390px;
+	font-family: var(--third-family);
+	font-size: clamp(22px, 2.5vw, 32px);
+	font-weight: 600;
+	line-height: normal;
+	letter-spacing: -0.64px;
+	color: var(--content-primary);
+	transition: all 0.3s;
+
+	@include mobile {
+	  letter-spacing: -0.44px;
+	}
+  }
+
+  &__image {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	display: flex;
+	max-width: 170px;
+	width: 100%;
+	height: auto;
+	z-index: -1;
+
+	img,picture{
+	  width: 100%;
+	  height: auto;
+	  object-fit: cover;
+	  object-position: top left;
+	}
+
+	&.mode{
+	  max-width: 240px;
+
+	  @include mobile{
+		left: 0;
+	  }
+	}
+
+	@include laptop{
+	  right: -30px;
+	}
+
+	@include tablet{
+	  bottom: -100px;
+	}
+
+	@include small-tablet{
+	  bottom: 0;
+	  right: 0;
+	  height: 280px;
+	  overflow: hidden;
+	}
+
+	@include mobile{
+	  max-width: 240px;
+	  width: auto;
+	  right: initial;
+	  left: 24px;
+	}
+  }
+
+  .link{
+	@include for-mobile {
+	  opacity: 0;
+	  pointer-events: none;
+	  visibility: hidden;
+	}
+	@include mobile{
+	  align-self: flex-end;
+	}
+  }
+
+  &__content {
+	background: var(--content-alternative);
+	border-radius: 18px;
+	padding: 36px 34px 30px 34px;
+	min-height: 220px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	position: relative;
+	z-index: 2;
+	gap: 14px;
+
+	p {
+	  font-family: var(--font-family);
+	  font-weight: 400;
+	  font-size: 16px;
+	  line-height: 130%;
+	  text-align: center;
+	  color: var(--content-primary);
+	}
+  }
+
+  &__labels {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+  }
+
+  &__label {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	border-radius: 28px;
+	border: 1px solid rgba(0, 113, 227, 0.10);
+	padding: clamp(12px, 1.09375vw, 14px);
+	height: clamp(38px, 3.28125vw, 42px);
+	transition: all .3s;
+	color: var(--content-primary);
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+	transition: all 0.3s;
+
+	.sprite {
+	  display: flex;
+	  color: var(--cl-c);
+	  width: 14px;
+	  height: 14px;
+
+	  svg {
+		transition: all .3s;
+		width: 100%;
+		height: 100%;
+	  }
+	}
+
+	@include mobile{
+	  font-size: 12px;
+	}
+  }
+
+  &__inner {
+	display: flex;
+	flex-direction: column;
+	transition: all 0.3s;
+	gap: clamp(16px, 1.875vw, 24px);
+
+	p {
+	  max-width: clamp(320px, 30.46875vw, 390px);
+	  transition: all 0.3s;
+	}
+
+	@include laptop{
+	  margin-bottom: auto;
+	}
+  }
+
+  &__bg {
+	position: absolute;
+	z-index: -3;
+	inset: 0;
+	pointer-events: none;
+	transition: all .3s;
+
+	img, picture {
+	  width: 100%;
+	  height: 100%;
+	}
+
+	&.mode {
+	  opacity: 0;
+	  z-index: -2;
+	}
+  }
+
+  &__item {
+	overflow: hidden;
+	position: relative;
+	z-index: 1;
+	width: 50%;
+	min-height: 560px;
+	border-radius: 20px;
+	padding: clamp(24px, 3.125vw, 40px) 24px 24px clamp(24px, 3.515625vw, 45px);
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: space-between;
+	position: relative;
+	overflow: hidden;
+
+	&:first-of-type{
+	  @include mobile{
+		.join-us-section__label{
+		  &:first-of-type{
+			order: -2;
+		  }
+		  &:last-of-type{
+			order: -1;
+		  }
+		}
+	  }
+	}
+
+	@include laptop{
+	  gap: 32px;
+	  padding: 24px;
+	  justify-content: flex-start;
+	}
+
+	&:hover {
+	  .link{
+		pointer-events: auto;
+		opacity: 1;
+		visibility: visible;
+	  }
+	  .join-us-section{
+		&__inner{
+		  *{
+			color:  var(--cl-b);
+		  }
+		}
+		&__label{
+		  color:  var(--cl-b);
+
+		  border-color: rgba(255, 255, 255, 0.10);
+		  .sprite{
+			color:  var(--cl-b);
+		  }
+		}
+		&__bg.mode{
+		  opacity: 1;
+		}
+	  }
+	}
+
+	@include small-tablet {
+	  width: 100%;
+	}
+
+	@include mobile{
+	  min-height: 560px;
+	}
+  }
+}

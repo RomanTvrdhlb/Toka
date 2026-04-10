@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html')
+
+<body>
+@include('partials/header.html')
+<main class="main">
+    <section class="hero-section mode">
+        <div class="hero-section__bg">
+            <picture>
+                <source type='image/webp' srcset='img/hero-bg.webp'>
+                <img width='1400' height='508' src='img/hero-bg.png' alt='image'>
+            </picture>
+        </div>
+        <div class="container">
+            <div class="hero-section__box">
+                <div class="hero-section__inner">
+                    <h1 class="title mode">Приєднуйся<br>
+                        до команди TOKA</h1>
+
+                    <p>Будуємо мережу швидкої зарядки для електромобiлiв разом</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq-section mode" data-tabs-parrent>
+        <div class="container">
+            <div class="faq-section__box">
+
+                <div class="faq-nav">
+                    <button class="faq-btn active" type="button"
+                            data-tab="1">
+                        Без досвіду
+                    </button>
+
+                    <button class="faq-btn" type="button"
+                            data-tab="2">
+                        1 рік досвіду
+                    </button>
+
+                    <button class="faq-btn" type="button"
+                            data-tab="3">
+                        2 роки досвіду
+                    </button>
+                </div>
+
+                <div class="faq-tabs" data-accordion data-default="2" data-single="true"
+                     data-breakpoint="576">
+                    <div class="faq-tabs-item active" data-tab-content="1">
+                        <ul class="acc" >
+                            <li class="acc__item">
+                                <div class="acc__btn" data-id="1">
+                                    <div class="acc__btn-box">
+                                        <ul class="breadcrumbs">
+                                            <li>Київ</li>
+                                            <li>Віддалено</li>
+                                        </ul>
+
+                                        <span class="acc__btn-label">+2 роки досвіду</span>
+
+                                        <span class="acc__btn-title">Аккаунт менеджер</span>
+                                    </div>
+
+                                    <a href="#" class="action-btn action-btn-v2">Залишити заявку</a>
+
+                                    <i class="sprite">
+                                        <svg width='20' height='12'>
+                                            <use href='img/sprite/sprite.svg#arrow'></use>
+                                        </svg>
+                                    </i>
+                                </div>
+                                <div class="acc__content" data-content="1">
+                                    <div class="acc__box editor">
+                                        <h4>Опис вакансії</h4>
+                                        <p>Досягненням 2014 року став початок власного виробництво дитячих крісел колісних моделі CHILD 1. Спілкування з батьками, їх поради, співпраця з реабілітаційними центрами “Джерело” та “Надія”, наполеглива робота майстрів допомогли створити коляску, яка відповідає усім європейським стандартам.</p>
+
+                                        <br>
+
+                                        <h4>Умови кредитування:</h4>
+                                        <ul>
+                                            <li><p>Авансовий платіж від 20%</p></li>
+                                            <li><p>Термін кредитування до 5 років.</p></li>
+                                        </ul>
+
+                                        <br>
+
+                                        <h4>Обов'язки:</h4>
+                                        <ul>
+                                            <li><p>Авансовий платіж від 20%</p></li>
+                                            <li><p>Термін кредитування до 5 років.</p></li>
+                                            <li><p>Термін кредитування до 5 років.</p></li>
+                                            <li><p>Термін кредитування до 5 років.</p></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="acc__item">
+                                <div class="acc__btn" data-id="2">
+                                    <div class="acc__btn-box">
+                                        <ul class="breadcrumbs">
+                                            <li>Київ</li>
+                                            <li>Віддалено</li>
+                                        </ul>
+
+                                        <span class="acc__btn-label">+2 роки досвіду</span>
+
+                                        <span class="acc__btn-title">Аккаунт менеджер</span>
+                                    </div>
+
+                                    <a href="#" class="action-btn action-btn-v2">Залишити заявку</a>
+
+                                    <i class="sprite">
+                                        <svg width='20' height='12'>
+                                            <use href='img/sprite/sprite.svg#arrow'></use>
+                                        </svg>
+                                    </i>
+                                </div>
+                                <div class="acc__content" data-content="2">
+                                    <div class="acc__box editor">
+                                        <h4>Опис вакансії</h4>
+                                        <p>Досягненням 2014 року став початок власного виробництво дитячих крісел колісних моделі CHILD 1. Спілкування з батьками, їх поради, співпраця з реабілітаційними центрами “Джерело” та “Надія”, наполеглива робота майстрів допомогли створити коляску, яка відповідає усім європейським стандартам.</p>
+
+                                        <br>
+
+                                        <h4>Умови кредитування:</h4>
+                                        <ul>
+                                            <li><p>Авансовий платіж від 20%</p></li>
+                                            <li><p>Термін кредитування до 5 років.</p></li>
+                                        </ul>
+
+                                        <br>
+
+                                        <h4>Обов'язки:</h4>
+                                        <ul>
+                                            <li><p>Авансовий платіж від 20%</p></li>
+                                            <li><p>Термін кредитування до 5 років.</p></li>
+                                            <li><p>Термін кредитування до 5 років.</p></li>
+                                            <li><p>Термін кредитування до 5 років.</p></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="acc__item">
+                                <div class="acc__btn" data-id="3">
+                                    <div class="acc__btn-box">
+                                        <ul class="breadcrumbs">
+                                            <li>Київ</li>
+                                            <li>Віддалено</li>
+                                        </ul>
+
+                                        <span class="acc__btn-label">+2 роки досвіду</span>
+
+                                        <span class="acc__btn-title">Аккаунт менеджер</span>
+                                    </div>
+
+                                    <a href="#" class="action-btn action-btn-v2">Залишити заявку</a>
+
+                                    <i class="sprite">
+                                        <svg width='20' height='12'>
+                                            <use href='img/sprite/sprite.svg#arrow'></use>
+                                        </svg>
+                                    </i>
+                                </div>
+                                <div class="acc__content" data-content="3">
+                                    <div class="acc__box editor">
+                                        <h4>Опис вакансії</h4>
+                                        <p>Досягненням 2014 року став початок власного виробництво дитячих крісел колісних моделі CHILD 1. Спілкування з батьками, їх поради, співпраця з реабілітаційними центрами “Джерело” та “Надія”, наполеглива робота майстрів допомогли створити коляску, яка відповідає усім європейським стандартам.</p>
+
+                                        <br>
+
+                                        <h4>Умови кредитування:</h4>
+                                        <ul>
+                                            <li><p>Авансовий платіж від 20%</p></li>
+                                            <li><p>Термін кредитування до 5 років.</p></li>
+                                        </ul>
+
+                                        <br>
+
+                                        <h4>Обов'язки:</h4>
+                                        <ul>
+                                            <li><p>Авансовий платіж від 20%</p></li>
+                                            <li><p>Термін кредитування до 5 років.</p></li>
+                                            <li><p>Термін кредитування до 5 років.</p></li>
+                                            <li><p>Термін кредитування до 5 років.</p></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="faq-tabs-item" data-tab-content="2">
+                        <ul class="acc" >
+                            <li class="acc__item">
+                                <div class="acc__btn" data-id="4">
+                                    <div class="acc__btn-box">
+                                        <ul class="breadcrumbs">
+                                            <li>Київ</li>
+                                            <li>Віддалено</li>
+                                        </ul>
+
+                                        <span class="acc__btn-label">+2 роки досвіду</span>
+
+                                        <span class="acc__btn-title">Аккаунт менеджер2</span>
+                                    </div>
+
+                                    <a href="#" class="action-btn action-btn-v2">Залишити заявку</a>
+
+                                    <i class="sprite">
+                                        <svg width='20' height='12'>
+                                            <use href='img/sprite/sprite.svg#arrow'></use>
+                                        </svg>
+                                    </i>
+                                </div>
+                                <div class="acc__content" data-content="4">
+                                    <div class="acc__box editor">
+                                        <h4>Опис вакансії</h4>
+                                        <p>Досягненням 2014 року став початок власного виробництво дитячих крісел колісних моделі CHILD 1. Спілкування з батьками, їх поради, співпраця з реабілітаційними центрами “Джерело” та “Надія”, наполеглива робота майстрів допомогли створити коляску, яка відповідає усім європейським стандартам.</p>
+
+                                        <br>
+
+                                        <h4>Умови кредитування:</h4>
+                                        <ul>
+                                            <li><p>Авансовий платіж від 20%</p></li>
+                                            <li><p>Термін кредитування до 5 років.</p></li>
+                                        </ul>
+
+                                        <br>
+
+                                        <h4>Обов'язки:</h4>
+                                        <ul>
+                                            <li><p>Авансовий платіж від 20%</p></li>
+                                            <li><p>Термін кредитування до 5 років.</p></li>
+                                            <li><p>Термін кредитування до 5 років.</p></li>
+                                            <li><p>Термін кредитування до 5 років.</p></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="acc__item">
+                                <div class="acc__btn" data-id="5">
+                                    <div class="acc__btn-box">
+                                        <ul class="breadcrumbs">
+                                            <li>Київ</li>
+                                            <li>Віддалено</li>
+                                        </ul>
+
+                                        <span class="acc__btn-label">+2 роки досвіду</span>
+
+                                        <span class="acc__btn-title">Аккаунт менеджер</span>
+                                    </div>
+
+                                    <a href="#" class="action-btn action-btn-v2">Залишити заявку</a>
+
+                                    <i class="sprite">
+                                        <svg width='20' height='12'>
+                                            <use href='img/sprite/sprite.svg#arrow'></use>
+                                        </svg>
+                                    </i>
+                                </div>
+                                <div class="acc__content" data-content="5">
+                                    <div class="acc__box editor">
+                                        <h4>Опис вакансії</h4>
+                                        <p>Досягненням 2014 року став початок власного виробництво дитячих крісел колісних моделі CHILD 1. Спілкування з батьками, їх поради, співпраця з реабілітаційними центрами “Джерело” та “Надія”, наполеглива робота майстрів допомогли створити коляску, яка відповідає усім європейським стандартам.</p>
+
+                                        <br>
+
+                                        <h4>Умови кредитування:</h4>
+                                        <ul>
+                                            <li><p>Авансовий платіж від 20%</p></li>
+                                            <li><p>Термін кредитування до 5 років.</p></li>
+                                        </ul>
+
+                                        <br>
+
+                                        <h4>Обов'язки:</h4>
+                                        <ul>
+                                            <li><p>Авансовий платіж від 20%</p></li>
+                                            <li><p>Термін кредитування до 5 років.</p></li>
+                                            <li><p>Термін кредитування до 5 років.</p></li>
+                                            <li><p>Термін кредитування до 5 років.</p></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="acc__item">
+                                <div class="acc__btn" data-id="6">
+                                    <div class="acc__btn-box">
+                                        <ul class="breadcrumbs">
+                                            <li>Київ</li>
+                                            <li>Віддалено</li>
+                                        </ul>
+
+                                        <span class="acc__btn-label">+2 роки досвіду</span>
+
+                                        <span class="acc__btn-title">Аккаунт менеджер</span>
+                                    </div>
+
+                                    <a href="#" class="action-btn action-btn-v2">Залишити заявку</a>
+
+                                    <i class="sprite">
+                                        <svg width='20' height='12'>
+                                            <use href='img/sprite/sprite.svg#arrow'></use>
+                                        </svg>
+                                    </i>
+                                </div>
+                                <div class="acc__content" data-content="6">
+                                    <div class="acc__box editor">
+                                        <h4>Опис вакансії</h4>
+                                        <p>Досягненням 2014 року став початок власного виробництво дитячих крісел колісних моделі CHILD 1. Спілкування з батьками, їх поради, співпраця з реабілітаційними центрами “Джерело” та “Надія”, наполеглива робота майстрів допомогли створити коляску, яка відповідає усім європейським стандартам.</p>
+
+                                        <br>
+
+                                        <h4>Умови кредитування:</h4>
+                                        <ul>
+                                            <li><p>Авансовий платіж від 20%</p></li>
+                                            <li><p>Термін кредитування до 5 років.</p></li>
+                                        </ul>
+
+                                        <br>
+
+                                        <h4>Обов'язки:</h4>
+                                        <ul>
+                                            <li><p>Авансовий платіж від 20%</p></li>
+                                            <li><p>Термін кредитування до 5 років.</p></li>
+                                            <li><p>Термін кредитування до 5 років.</p></li>
+                                            <li><p>Термін кредитування до 5 років.</p></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="faq-tabs-item" data-tab-content="3">
+                        <ul class="acc">
+                            <li class="acc__item">
+                                <div class="acc__btn" data-id="7">
+                                    <div class="acc__btn-box">
+                                        <ul class="breadcrumbs">
+                                            <li>Київ</li>
+                                            <li>Віддалено</li>
+                                        </ul>
+
+                                        <span class="acc__btn-label">+2 роки досвіду</span>
+
+                                        <span class="acc__btn-title">Аккаунт менеджер3</span>
+                                    </div>
+
+                                    <a href="#" class="action-btn action-btn-v2">Залишити заявку</a>
+
+                                    <i class="sprite">
+                                        <svg width='20' height='12'>
+                                            <use href='img/sprite/sprite.svg#arrow'></use>
+                                        </svg>
+                                    </i>
+                                </div>
+                                <div class="acc__content" data-content="7">
+                                    <div class="acc__box editor">
+                                        <h4>Опис вакансії</h4>
+                                        <p>Досягненням 2014 року став початок власного виробництво дитячих крісел колісних моделі CHILD 1. Спілкування з батьками, їх поради, співпраця з реабілітаційними центрами “Джерело” та “Надія”, наполеглива робота майстрів допомогли створити коляску, яка відповідає усім європейським стандартам.</p>
+
+                                        <br>
+
+                                        <h4>Умови кредитування:</h4>
+                                        <ul>
+                                            <li><p>Авансовий платіж від 20%</p></li>
+                                            <li><p>Термін кредитування до 5 років.</p></li>
+                                        </ul>
+
+                                        <br>
+
+                                        <h4>Обов'язки:</h4>
+                                        <ul>
+                                            <li><p>Авансовий платіж від 20%</p></li>
+                                            <li><p>Термін кредитування до 5 років.</p></li>
+                                            <li><p>Термін кредитування до 5 років.</p></li>
+                                            <li><p>Термін кредитування до 5 років.</p></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="acc__item">
+                                <div class="acc__btn" data-id="8">
+                                    <div class="acc__btn-box">
+                                        <ul class="breadcrumbs">
+                                            <li>Київ</li>
+                                            <li>Віддалено</li>
+                                        </ul>
+
+                                        <span class="acc__btn-label">+2 роки досвіду</span>
+
+                                        <span class="acc__btn-title">Аккаунт менеджер</span>
+                                    </div>
+
+                                    <a href="#" class="action-btn action-btn-v2">Залишити заявку</a>
+
+                                    <i class="sprite">
+                                        <svg width='20' height='12'>
+                                            <use href='img/sprite/sprite.svg#arrow'></use>
+                                        </svg>
+                                    </i>
+                                </div>
+                                <div class="acc__content" data-content="8">
+                                    <div class="acc__box editor">
+                                        <h4>Опис вакансії</h4>
+                                        <p>Досягненням 2014 року став початок власного виробництво дитячих крісел колісних моделі CHILD 1. Спілкування з батьками, їх поради, співпраця з реабілітаційними центрами “Джерело” та “Надія”, наполеглива робота майстрів допомогли створити коляску, яка відповідає усім європейським стандартам.</p>
+
+                                        <br>
+
+                                        <h4>Умови кредитування:</h4>
+                                        <ul>
+                                            <li><p>Авансовий платіж від 20%</p></li>
+                                            <li><p>Термін кредитування до 5 років.</p></li>
+                                        </ul>
+
+                                        <br>
+
+                                        <h4>Обов'язки:</h4>
+                                        <ul>
+                                            <li><p>Авансовий платіж від 20%</p></li>
+                                            <li><p>Термін кредитування до 5 років.</p></li>
+                                            <li><p>Термін кредитування до 5 років.</p></li>
+                                            <li><p>Термін кредитування до 5 років.</p></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="acc__item">
+                                <div class="acc__btn" data-id="9">
+                                    <div class="acc__btn-box">
+                                        <ul class="breadcrumbs">
+                                            <li>Київ</li>
+                                            <li>Віддалено</li>
+                                        </ul>
+
+                                        <span class="acc__btn-label">+2 роки досвіду</span>
+
+                                        <span class="acc__btn-title">Аккаунт менеджер</span>
+                                    </div>
+
+                                    <a href="#" class="action-btn action-btn-v2">Залишити заявку</a>
+
+                                    <i class="sprite">
+                                        <svg width='20' height='12'>
+                                            <use href='img/sprite/sprite.svg#arrow'></use>
+                                        </svg>
+                                    </i>
+                                </div>
+                                <div class="acc__content" data-content="9">
+                                    <div class="acc__box editor">
+                                        <h4>Опис вакансії</h4>
+                                        <p>Досягненням 2014 року став початок власного виробництво дитячих крісел колісних моделі CHILD 1. Спілкування з батьками, їх поради, співпраця з реабілітаційними центрами “Джерело” та “Надія”, наполеглива робота майстрів допомогли створити коляску, яка відповідає усім європейським стандартам.</p>
+
+                                        <br>
+
+                                        <h4>Умови кредитування:</h4>
+                                        <ul>
+                                            <li><p>Авансовий платіж від 20%</p></li>
+                                            <li><p>Термін кредитування до 5 років.</p></li>
+                                        </ul>
+
+                                        <br>
+
+                                        <h4>Обов'язки:</h4>
+                                        <ul>
+                                            <li><p>Авансовий платіж від 20%</p></li>
+                                            <li><p>Термін кредитування до 5 років.</p></li>
+                                            <li><p>Термін кредитування до 5 років.</p></li>
+                                            <li><p>Термін кредитування до 5 років.</p></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+@include('partials/footer.html')
+
+</body>
+
+</html>

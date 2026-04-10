@@ -1,0 +1,23 @@
+@use "../../mixins/breakpoint" as *;
+
+.list-section {
+  padding: var(--default-padding) 0;
+  overflow: hidden;
+
+  .top{
+	max-width: clamp(700px, 66.40625vw, 850px);
+	align-self: center;
+	width: 100%;
+  }
+
+  &__box{
+	display: flex;
+	flex-direction: column;
+	gap: clamp(40px, 4.6875vw, 60px);
+  }
+
+  & + .contact-section{
+	padding-top: clamp(36px, 5.46875vw, 70px);
+  }
+
+}

@@ -1,0 +1,122 @@
+@use "../../mixins/breakpoint" as *;
+
+.hero-section + .blog-section {
+  padding: clamp(48px, 6.25vw, 80px) 0 clamp(56px, 6.25vw, 80px);
+}
+.blog-section {
+  padding: var(--default-padding) 0;
+
+  &__box{
+	display: flex;
+	flex-direction: column;
+	gap: 32px;
+  }
+
+  &__tabs{
+	.blog-section__item{
+	  width: 100%;
+	}
+
+	& > .action-btn{
+	  margin: clamp(32px, 3.125vw, 40px) auto 0;
+	}
+
+	.blog-list{
+	  @include tablet{
+		.blog-list__item:nth-child(n+10) {
+		  display: none;
+		}
+	  }
+	  @include mobile{
+		.blog-list__item:nth-child(n+5) {
+		  display: none;
+		}
+	  }
+	}
+
+	.pagination{
+	  margin: 32px auto 0;
+	}
+  }
+
+  &__title{
+	color: var(--content-primary);
+	font-family: var(--third-family);
+	font-size: 24px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 138%;
+	display: flex;
+	align-items: center;
+	gap: clamp(24px, 2.5vw, 32px);
+
+	img,svg{
+	  width: clamp(64px, 9.53125vw, 122px);
+	}
+
+	@include for-small-tablet{
+	  margin-bottom: 4px;
+	}
+  }
+
+  .blog-nav{
+	@include for-small-tablet{
+	  margin-bottom: clamp(2px, 1.25vw, 16px);
+	}
+  }
+
+  &__list {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 16px;
+
+	&::-webkit-scrollbar {
+	  display: none;
+	}
+
+	@include tablet{
+	  scroll-behavior: smooth;
+	  scroll-snap-type: x mandatory;
+	  scroll-padding-left: var(--container-offset);
+	  overflow-x: auto;
+	  width: calc(100% + (var(--container-offset) * 2));
+	  margin-left: calc(var(--container-offset) * -1);
+	  padding: 0 var(--container-offset);
+	}
+  }
+
+  &__item{
+
+	@include tablet{
+	  width: 327px;
+	  scroll-snap-align: start;
+	}
+  }
+
+  &.author{
+	padding: calc(32px + clamp(32px, 3.125vw, 40px) + var(--header-height)) 0 clamp(56px, 5.078125vw, 65px);
+
+	.blog-section{
+	  &__box{
+		gap: clamp(32px, 4.375vw, 56px);
+	  }
+	}
+
+	.blog-list{
+	  @include tablet{
+		.blog-list__item:nth-child(n+9) {
+		  display: none;
+		}
+	  }
+	  @include mobile{
+		.blog-list__item:nth-child(n+4) {
+		  display: none;
+		}
+	  }
+	}
+	@include small-tablet{
+	  padding-top: calc(18px + clamp(32px, 3.125vw, 40px) + var(--header-height));
+	}
+
+  }
+}

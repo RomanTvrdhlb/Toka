@@ -1,0 +1,89 @@
+@use "../../mixins/breakpoint" as *;
+
+.seoblock-section{
+  padding: calc(var(--default-padding) + clamp(8px, 1.5625vw, 20px)) 0 clamp(64px, 7.8125vw, 100px);
+
+  .seoblock-btn{
+
+	&.active{
+	  .action-btn__ic{
+		transform: scaleY(-1);
+	  }
+	}
+  }
+
+  &__box {
+	position: relative;
+
+	max-height: 584px;
+	overflow: hidden;
+
+	transition: max-height 0.3s ease;
+
+	&::after {
+	  display: block;
+	  content: '';
+	  height: 184px;
+	  background: linear-gradient(0deg, #fff 15.2%, rgba(255, 255, 255, 0) 100%);
+	  position: absolute;
+	  bottom: 0;
+	  left: 0;
+	  right: 0;
+	  width: 100%;
+	}
+
+	color: var(--content-primary);
+	font-weight: 300;
+	line-height: 140%;
+
+	* {
+	  font-weight: 300;
+	}
+
+	h2 {
+	  line-height: 140%;
+	  font-size: clamp(24px, 3.733vw, 32px);
+	}
+
+	h3 {
+	  font-size: clamp(20px, 2.933vw, 24px);
+	}
+
+	h4 {
+	  font-size: clamp(18px, 2.533vw, 20px);
+	}
+
+	h5 {
+	  font-size: clamp(16px, 2.267vw, 18px);
+	}
+
+	p {
+	  font-size: 16px;
+	}
+
+	&.active {
+	  margin-bottom: 40px;
+
+	  &::after {
+		display: none;
+	  }
+	}
+  }
+
+  &__bottom {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	padding-bottom: 22px;
+	transition: 0.23s;
+
+	&.active {
+	  bottom: -80px;
+	}
+  }
+}
+

@@ -1,0 +1,33 @@
+@use "../../mixins/breakpoint" as *;
+
+.blog-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+
+  &__item{
+
+    .blog-card{
+      height: clamp(398px, 37.890625vw, 485px);
+    }
+    &:has(.blog-card.big){
+      grid-column: 1/-1;
+      margin-bottom: clamp(10px, 3.59375vw, 46px);
+
+      .blog-card{
+
+        &__title{
+          max-width: 525px;
+        }
+      }
+    }
+  }
+
+  @include tablet{
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include mobile{
+    grid-template-columns: 100%;
+  }
+}

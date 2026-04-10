@@ -1,0 +1,51 @@
+@use "../../mixins/breakpoint" as *;
+
+.charging-section{
+  padding: var(--default-padding) 0;
+  overflow: hidden;
+
+  &__box{
+	display: flex;
+	flex-direction: column;
+	gap: 32px;
+  }
+
+  &__nav{
+	display: flex;
+	justify-content: center;
+	gap: 8px;
+  }
+  &__slider{
+	display: flex;
+	flex-direction: column;
+	gap: clamp(32px, 2.734375vw, 35px);
+	position: relative;
+	z-index: 1;
+
+	&:before, &:after {
+	  width: 50vw;
+	  height: 102%;
+	  bottom: -3px;
+	  content: '';
+	  position: absolute;
+	  pointer-events: none;
+	  z-index: 2;
+
+	  @include full-hd{
+		content: none;
+	  }
+	}
+
+	&:before {
+	  background: linear-gradient(90deg, rgba(255, 255, 255, 0.00) 0%, rgba(255, 255, 255, 0.5) 15%, var(--body-bg) 22%);
+	  right: 0;
+	  transform: translateX(100%);
+	}
+
+	&:after {
+	  background: linear-gradient(-90deg, rgba(255, 255, 255, 0.00) 0%,rgba(255, 255, 255, 0.5) 15%, var(--body-bg) 22%);
+	  left: 0;
+	  transform: translateX(-100%);
+	}
+  }
+}
