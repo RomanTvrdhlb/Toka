@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html')
+
+<body>
+@include('partials/header.html')
+<main class="main">
+    <section class="hero-section mode">
+        <div class="hero-section__bg">
+            <picture>
+                <source type='image/webp' srcset='img/hero-bg.webp'>
+                <img width='1400' height='508' src='img/hero-bg.png' alt='image'>
+            </picture>
+        </div>
+        <div class="container">
+            <div class="hero-section__box">
+                <div class="hero-section__inner">
+                    <ul class="breadcrumbs">
+                        <li><a href="index.html">Бізнесу</a></li>
+                        <li>Є локація</li>
+                    </ul>
+
+                    <h1 class="title mode">Ваша локація<br> додатковий капітал для вас</h1>
+
+                    <p>Станція на вашій локації — перевіримо,<br> оцінемо, встановимо, підключимо
+                    </p>
+
+                    <a href="#" class="action-btn action-btn-v2">Залишити заявку
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="info-section">
+        <div class="container">
+            <div class="info-section__box">
+                <div class="top">
+                    <h2 class="title-main">Для кого це актуально</h2>
+                </div>
+
+                <ul class="info-section__list">
+                    <li class="info-section__item">
+                        <div class="info-card">
+                            <div class="info-card__image">
+                                <picture>
+                                    <source type='image/webp' srcset='img/info-card1.webp'>
+                                    <img width='384' height='256' src='img/info-card1.png' alt='image'>
+                                </picture>
+                            </div>
+                            <span class="info-card__title">Бізнес-локації з трафіком</span>
+                            <p>ТРЦ, БЦ, супермаркети, готелі, фітнес-клуби, ресторани, АЗК</p>
+                        </div>
+                    </li>
+                    <li class="info-section__item">
+                        <div class="info-card">
+                            <div class="info-card__image">
+                                <picture>
+                                    <source type='image/webp' srcset='img/info-card2.webp'>
+                                    <img width='384' height='256' src='img/info-card2.png' alt='image'>
+                                </picture>
+                            </div>
+                            <span class="info-card__title">Житлова інфраструктура</span>
+                            <p>ОСББ, котеджні містечка, багатоповерхові паркінги</p>
+                        </div>
+                    </li>
+                    <li class="info-section__item">
+                        <div class="info-card">
+                            <div class="info-card__image">
+                                <picture>
+                                    <source type='image/webp' srcset='img/info-card3.webp'>
+                                    <img width='384' height='256' src='img/info-card3.png' alt='image'>
+                                </picture>
+                            </div>
+                            <span class="info-card__title">Локації без інфраструктури</span>
+                            <p>Приватні парковки, паркінги біля ЖК, бізнес-центрів</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="list-section">
+        <div class="container">
+            <div class="list-section__box">
+                <ul class="location-list">
+                    <li class="location-list__item">
+                            <div class="location-list__box">
+                                <div class="location-list__image">
+                                    <picture>
+                                        <source type='image/webp' srcset='img/location.webp'>
+                                        <img width='794' height='600' src='img/location.png' alt='image'>
+                                    </picture>
+                                </div>
+
+                                <span class="location-list__title">Що отримує власник локації</span>
+
+                               <div class="location-list__bottom">
+                                   <span class="location-list__subtitle">Зарядна станція = лід-магніт</span>
+                                   <p>Водії електромобілів цілеспрямовано обирають локації з зарядкою</p>
+                               </div>
+                            </div>
+
+                            <div class="location-list__inner">
+                                <ul class="location-list__sublist">
+                                    <li class="location-list__sublist-item">
+                                        <i class="sprite">
+                                            <svg width='18' height='18'>
+                                                <use href='img/sprite/sprite.svg#check'></use>
+                                            </svg>
+                                        </i>
+                                        <span>Зарядну станцію від партнера на своїй території</span>
+                                    </li>
+                                    <li class="location-list__sublist-item">
+                                        <i class="sprite">
+                                            <svg width='18' height='18'>
+                                                <use href='img/sprite/sprite.svg#check'></use>
+                                            </svg>
+                                        </i>
+                                        <span>Додатковий сервіс для клієнтів</span>
+                                    </li>
+                                    <li class="location-list__sublist-item">
+                                        <i class="sprite">
+                                            <svg width='18' height='18'>
+                                                <use href='img/sprite/sprite.svg#check'></use>
+                                            </svg>
+                                        </i>
+                                        <span>Конкурентну перевагу</span>
+                                    </li>
+                                    <li class="location-list__sublist-item">
+                                        <i class="sprite">
+                                            <svg width='18' height='18'>
+                                                <use href='img/sprite/sprite.svg#check'></use>
+                                            </svg>
+                                        </i>
+                                        <span>Зростання трафіку та часу перебування клієнтів</span>
+                                    </li>
+                                </ul>
+                            </div>
+                    </li>
+
+                    <li class="location-list__item">
+                        <div class="location-list__box">
+                            <div class="location-list__image mode">
+                                <picture>
+                                    <source type='image/webp' media='(max-width: 767px)' srcset='img/location2mob.webp'>
+                                    <source media='(max-width: 767px)' srcset='img/location2mob.png'>
+                                    <source type='image/webp' srcset='img/location2.webp'>
+                                    <img width='670' height='500' src='img/location2.png' alt='image'>
+                                </picture>
+                            </div>
+                        </div>
+
+                        <div class="location-list__inner">
+                            <span class="location-list__icon">
+                                 <i class="sprite">
+                                        <svg width='32' height='32'>
+                                            <use href='img/sprite/sprite.svg#bitcoin'></use>
+                                        </svg>
+                                    </i>
+                            </span>
+
+                            <span class="location-list__title">Пасивний дохід</span>
+                            <p>TOKА інвестує в обладнання, обслуговує станцію та керує білінгом. Ви отримуєте дохід з кожної зарядної сесії — без вкладень в обладнання, без операційних процесів
+                            </p>
+
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-section__box">
+                <div class="contact-section__bg">
+                    <picture>
+                        <source type='image/webp' srcset='img/bg2.webp'>
+                        <img width='632' height='559' src='img/bg2.png' alt='image'>
+                    </picture>
+                </div>
+
+                <div class="top">
+                    <h2 class="title-main">Стати партнером</h2>
+                    <p>Залиште заявку — наш експерт зв'яжеться з вами</p>
+                </div>
+
+                <form class="contact-form">
+                    <div class="input-item input-name">
+                        <input type="text" placeholder="Ім’я" required>
+                    </div>
+
+                    <div class="input-item">
+                        <input type="tel" class="tel" placeholder="+380 (_ _) _ _ _-_ _-_ _" required>
+                    </div>
+
+                    <div class="input-item input-name">
+                        <input type="email" placeholder="Електронна пошта" required>
+                    </div>
+
+                    <div class="input-item input-name">
+                        <input type="email" placeholder="Місто" required>
+                    </div>
+
+                    <div>
+                        <div class="checkbox">
+                            <div class="checkbox_sc1">
+                                <input type="checkbox" name="agree" id="agreement" class="checkbox_inp" required
+                                       checked>
+                                <label for="agreement" class="checkbox_lbl"></label>
+                            </div>
+                            <label for="agreement" class="checkbox_lbl_txt">
+                                Я погоджуюсь з <a href="#">Політикою конфіденційності</a></a>
+                            </label>
+                        </div>
+                    </div>
+
+                    <button class="action-btn action-btn-v2" type="submit">Надіслати</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="charging-section">
+        <div class="container">
+            <div class="charging-section__box">
+                <div class="top">
+                    <span class="ttl-label">Встановлені станції</span>
+
+                    <h2 class="title-main">Зарядна станцiя<br>
+                        яка працює на вас</h2>
+                </div>
+
+                <div class="charging-section__slider">
+                    <div class="swiper charging-slider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="charging-slider__image">
+                                    <img src="img/charg1.jpg" alt="">
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="charging-slider__image">
+                                    <img src="img/charg2.png" alt="">
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="charging-slider__image">
+                                    <img src="img/charg3.png" alt="">
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="charging-slider__image">
+                                    <img src="img/charg4.jpg" alt="">
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="charging-slider__image">
+                                    <img src="img/charg2.png" alt="">
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="charging-slider__image">
+                                    <img src="img/charg1.jpg" alt="">
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="charging-slider__image">
+                                    <img src="img/charg3.png" alt="">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="charging-section__nav">
+                        <button class="slider-btn prev">
+                            <i class="sprite">
+                                <svg width='14' height='14'>
+                                    <use href='img/sprite/sprite.svg#arrow'></use>
+                                </svg>
+                            </i>
+                        </button>
+                        <button class="slider-btn next">
+                            <i class="sprite">
+                                <svg width='14' height='14'>
+                                    <use href='img/sprite/sprite.svg#arrow'></use>
+                                </svg>
+                            </i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="faq-section" data-tabs-parrent>
+        <div class="container">
+            <div class="faq-section__box">
+                <div class="top">
+                    <span class="ttl-label">FAQ</span>
+
+                    <h2 class="title-main">Поширенi вiдповiдi на вашi запитання</h2>
+                </div>
+
+                <div class="faq-nav">
+                    <button class="faq-btn active" type="button"
+                            data-tab="1">
+                        Загальні
+                    </button>
+
+                    <button class="faq-btn" type="button"
+                            data-tab="2">
+                        Для бізнесу
+                    </button>
+
+                    <button class="faq-btn" type="button"
+                            data-tab="3">
+                        Для користувачів
+                    </button>
+                </div>
+
+                <div class="faq-tabs" data-accordion>
+                    <div class="faq-tabs-item active" data-tab-content="1">
+                        <div class="faqitem">
+
+                            <div class="faqitem__top" data-id="1">
+                                <h4 class="faqitem__title">Як почати заряд?</h4>
+                            </div>
+
+                            <div class="faqitem__content" data-content="1">
+                                <p>Програма «Доступні кредити 5-7-9%» <br>
+                                    Клієнт, який бажає отримати станцію в кредит від ТОКА, може легко звернутися до нас
+                                    і ми візьмемо на себе всю роботу щодо збору документів та заповнення опитувальників.
+                                    Найголовніше, щоб клієнт визначився з тим, яку саме станцію він бажає придбати в
+                                    кредит, і ми готові надати детальний розрахунок за допомогою калькулятора.</p>
+
+                                <br>
+
+                                <p>Умови кредитування:</p>
+
+                                <ol>
+                                    <li><p>Авансовий платіж від 20%</p></li>
+                                    <li><p>Термін кредитування до 5 років.</p></li>
+                                </ol>
+
+                                <br>
+
+                                <p>Ми докладаємо всіх зусиль, щоб зробити процес отримання кредиту максимально зручним
+                                    для клієнта, беручи на себе важливі етапи від збору документів до розрахунку
+                                    вартості. Завдяки нашій програмі, клієнти можуть скористатися доступними ставками та
+                                    гнучкими умовами фінансування для розвитку свого бізнесу з зарядними станціями для
+                                    електромобілів.</p>
+                            </div>
+
+                        </div>
+
+                        <div class="faqitem">
+                            <div class="faqitem__top" data-id="2">
+                                <h4 class="faqitem__title">Що таке RFID-карта та як її замовити?</h4>
+                            </div>
+
+                            <div class="faqitem__content" data-content="2">
+                                <p>Програма «Доступні кредити 5-7-9%» <br>
+                                    Клієнт, який бажає отримати станцію в кредит від ТОКА, може легко звернутися до нас
+                                    і ми візьмемо на себе всю роботу щодо збору документів та заповнення опитувальників.
+                                    Найголовніше, щоб клієнт визначився з тим, яку саме станцію він бажає придбати в
+                                    кредит, і ми готові надати детальний розрахунок за допомогою калькулятора.</p>
+
+                                <br>
+
+                                <p>Умови кредитування:</p>
+
+                                <ol>
+                                    <li><p>Авансовий платіж від 20%</p></li>
+                                    <li><p>Термін кредитування до 5 років.</p></li>
+                                </ol>
+
+                                <br>
+
+                                <p>Ми докладаємо всіх зусиль, щоб зробити процес отримання кредиту максимально зручним
+                                    для клієнта, беручи на себе важливі етапи від збору документів до розрахунку
+                                    вартості. Завдяки нашій програмі, клієнти можуть скористатися доступними ставками та
+                                    гнучкими умовами фінансування для розвитку свого бізнесу з зарядними станціями для
+                                    електромобілів.</p>
+                            </div>
+                        </div>
+
+                        <div class="faqitem">
+                            <div class="faqitem__top" data-id="3">
+                                <h4 class="faqitem__title">Що робити, якщо зарядка не починається?</h4>
+                            </div>
+
+                            <div class="faqitem__content" data-content="3">
+                                <p>Програма «Доступні кредити 5-7-9%» <br>
+                                    Клієнт, який бажає отримати станцію в кредит від ТОКА, може легко звернутися до нас
+                                    і ми візьмемо на себе всю роботу щодо збору документів та заповнення опитувальників.
+                                    Найголовніше, щоб клієнт визначився з тим, яку саме станцію він бажає придбати в
+                                    кредит, і ми готові надати детальний розрахунок за допомогою калькулятора.</p>
+
+                                <br>
+
+                                <p>Умови кредитування:</p>
+
+                                <ul>
+                                    <li><p>Авансовий платіж від 20%</p></li>
+                                    <li><p>Термін кредитування до 5 років.</p></li>
+                                </ul>
+
+                                <br>
+
+                                <p>Ми докладаємо всіх зусиль, щоб зробити процес отримання кредиту максимально зручним
+                                    для клієнта, беручи на себе важливі етапи від збору документів до розрахунку
+                                    вартості. Завдяки нашій програмі, клієнти можуть скористатися доступними ставками та
+                                    гнучкими умовами фінансування для розвитку свого бізнесу з зарядними станціями для
+                                    електромобілів.</p>
+                            </div>
+                        </div>
+
+
+                        <div class="faqitem">
+                            <div class="faqitem__top" data-id="4">
+                                <h4 class="faqitem__title">Чи можна заздалегідь зарезервувати місце на станції для
+                                    зарядки?</h4>
+                            </div>
+
+                            <div class="faqitem__content" data-content="4">
+                                <p>Програма «Доступні кредити 5-7-9%» <br>
+                                    Клієнт, який бажає отримати станцію в кредит від ТОКА, може легко звернутися до нас
+                                    і ми візьмемо на себе всю роботу щодо збору документів та заповнення опитувальників.
+                                    Найголовніше, щоб клієнт визначився з тим, яку саме станцію він бажає придбати в
+                                    кредит, і ми готові надати детальний розрахунок за допомогою калькулятора.</p>
+
+                                <br>
+
+                                <p>Умови кредитування:</p>
+
+                                <ul>
+                                    <li><p>Авансовий платіж від 20%</p></li>
+                                    <li><p>Термін кредитування до 5 років.</p></li>
+                                </ul>
+
+                                <br>
+
+                                <p>Ми докладаємо всіх зусиль, щоб зробити процес отримання кредиту максимально зручним
+                                    для клієнта, беручи на себе важливі етапи від збору документів до розрахунку
+                                    вартості. Завдяки нашій програмі, клієнти можуть скористатися доступними ставками та
+                                    гнучкими умовами фінансування для розвитку свого бізнесу з зарядними станціями для
+                                    електромобілів.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-tabs-item" data-tab-content="2">
+                        <div class="faqitem">
+
+                            <div class="faqitem__top" data-id="5">
+                                <h4 class="faqitem__title">2Як розрахувати прибутковість зарядної станції для
+                                    електромобілів?</h4>
+                            </div>
+
+                            <div class="faqitem__content" data-content="5">
+                                <p>Програма «Доступні кредити 5-7-9%» <br>
+                                    Клієнт, який бажає отримати станцію в кредит від ТОКА, може легко звернутися до нас
+                                    і ми візьмемо на себе всю роботу щодо збору документів та заповнення опитувальників.
+                                    Найголовніше, щоб клієнт визначився з тим, яку саме станцію він бажає придбати в
+                                    кредит, і ми готові надати детальний розрахунок за допомогою калькулятора.</p>
+
+                                <br>
+
+                                <p>Умови кредитування:</p>
+
+                                <ul>
+                                    <li><p>Авансовий платіж від 20%</p></li>
+                                    <li><p>Термін кредитування до 5 років.</p></li>
+                                </ul>
+
+                                <br>
+
+                                <p>Ми докладаємо всіх зусиль, щоб зробити процес отримання кредиту максимально зручним
+                                    для клієнта, беручи на себе важливі етапи від збору документів до розрахунку
+                                    вартості. Завдяки нашій програмі, клієнти можуть скористатися доступними ставками та
+                                    гнучкими умовами фінансування для розвитку свого бізнесу з зарядними станціями для
+                                    електромобілів.</p>
+                            </div>
+
+                        </div>
+
+                        <div class="faqitem">
+                            <div class="faqitem__top" data-id="6">
+                                <h4 class="faqitem__title">Чи є у вас кредитна програма?</h4>
+                            </div>
+
+                            <div class="faqitem__content" data-content="6">
+                                <p>Програма «Доступні кредити 5-7-9%» <br>
+                                    Клієнт, який бажає отримати станцію в кредит від ТОКА, може легко звернутися до нас
+                                    і ми візьмемо на себе всю роботу щодо збору документів та заповнення опитувальників.
+                                    Найголовніше, щоб клієнт визначився з тим, яку саме станцію він бажає придбати в
+                                    кредит, і ми готові надати детальний розрахунок за допомогою калькулятора.</p>
+
+                                <br>
+
+                                <p>Умови кредитування:</p>
+
+                                <ul>
+                                    <li><p>Авансовий платіж від 20%</p></li>
+                                    <li><p>Термін кредитування до 5 років.</p></li>
+                                </ul>
+
+                                <br>
+
+                                <p>Ми докладаємо всіх зусиль, щоб зробити процес отримання кредиту максимально зручним
+                                    для клієнта, беручи на себе важливі етапи від збору документів до розрахунку
+                                    вартості. Завдяки нашій програмі, клієнти можуть скористатися доступними ставками та
+                                    гнучкими умовами фінансування для розвитку свого бізнесу з зарядними станціями для
+                                    електромобілів.</p>
+                            </div>
+                        </div>
+
+                        <div class="faqitem">
+                            <div class="faqitem__top" data-id="7">
+                                <h4 class="faqitem__title">Які методи платежів ви приймаєте?</h4>
+                            </div>
+
+                            <div class="faqitem__content" data-content="7">
+                                <p>Програма «Доступні кредити 5-7-9%» <br>
+                                    Клієнт, який бажає отримати станцію в кредит від ТОКА, може легко звернутися до нас
+                                    і ми візьмемо на себе всю роботу щодо збору документів та заповнення опитувальників.
+                                    Найголовніше, щоб клієнт визначився з тим, яку саме станцію він бажає придбати в
+                                    кредит, і ми готові надати детальний розрахунок за допомогою калькулятора.</p>
+
+                                <br>
+
+                                <p>Умови кредитування:</p>
+
+                                <ul>
+                                    <li><p>Авансовий платіж від 20%</p></li>
+                                    <li><p>Термін кредитування до 5 років.</p></li>
+                                </ul>
+
+                                <br>
+
+                                <p>Ми докладаємо всіх зусиль, щоб зробити процес отримання кредиту максимально зручним
+                                    для клієнта, беручи на себе важливі етапи від збору документів до розрахунку
+                                    вартості. Завдяки нашій програмі, клієнти можуть скористатися доступними ставками та
+                                    гнучкими умовами фінансування для розвитку свого бізнесу з зарядними станціями для
+                                    електромобілів.</p>
+                            </div>
+                        </div>
+
+
+                        <div class="faqitem">
+                            <div class="faqitem__top" data-id="8">
+                                <h4 class="faqitem__title">Чи можна заздалегідь зарезервувати місце на станції для
+                                    зарядки?</h4>
+                            </div>
+
+                            <div class="faqitem__content" data-content="8">
+                                <p>Програма «Доступні кредити 5-7-9%» <br>
+                                    Клієнт, який бажає отримати станцію в кредит від ТОКА, може легко звернутися до нас
+                                    і ми візьмемо на себе всю роботу щодо збору документів та заповнення опитувальників.
+                                    Найголовніше, щоб клієнт визначився з тим, яку саме станцію він бажає придбати в
+                                    кредит, і ми готові надати детальний розрахунок за допомогою калькулятора.</p>
+
+                                <br>
+
+                                <p>Умови кредитування:</p>
+
+                                <ul>
+                                    <li><p>Авансовий платіж від 20%</p></li>
+                                    <li><p>Термін кредитування до 5 років.</p></li>
+                                </ul>
+
+                                <br>
+
+                                <p>Ми докладаємо всіх зусиль, щоб зробити процес отримання кредиту максимально зручним
+                                    для клієнта, беручи на себе важливі етапи від збору документів до розрахунку
+                                    вартості. Завдяки нашій програмі, клієнти можуть скористатися доступними ставками та
+                                    гнучкими умовами фінансування для розвитку свого бізнесу з зарядними станціями для
+                                    електромобілів.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-tabs-item" data-tab-content="3">
+                        <div class="faqitem">
+
+                            <div class="faqitem__top" data-id="9">
+                                <h4 class="faqitem__title">3Як розрахувати прибутковість зарядної станції для
+                                    електромобілів?</h4>
+                            </div>
+
+                            <div class="faqitem__content" data-content="9">
+                                <p>Програма «Доступні кредити 5-7-9%» <br>
+                                    Клієнт, який бажає отримати станцію в кредит від ТОКА, може легко звернутися до нас
+                                    і ми візьмемо на себе всю роботу щодо збору документів та заповнення опитувальників.
+                                    Найголовніше, щоб клієнт визначився з тим, яку саме станцію він бажає придбати в
+                                    кредит, і ми готові надати детальний розрахунок за допомогою калькулятора.</p>
+
+                                <br>
+
+                                <p>Умови кредитування:</p>
+
+                                <ul>
+                                    <li><p>Авансовий платіж від 20%</p></li>
+                                    <li><p>Термін кредитування до 5 років.</p></li>
+                                </ul>
+
+                                <br>
+
+                                <p>Ми докладаємо всіх зусиль, щоб зробити процес отримання кредиту максимально зручним
+                                    для клієнта, беручи на себе важливі етапи від збору документів до розрахунку
+                                    вартості. Завдяки нашій програмі, клієнти можуть скористатися доступними ставками та
+                                    гнучкими умовами фінансування для розвитку свого бізнесу з зарядними станціями для
+                                    електромобілів.</p>
+                            </div>
+                        </div>
+
+                        <div class="faqitem">
+                            <div class="faqitem__top" data-id="10">
+                                <h4 class="faqitem__title">3Чи є у вас кредитна програма?</h4>
+                            </div>
+
+                            <div class="faqitem__content" data-content="10">
+                                <p>Програма «Доступні кредити 5-7-9%» <br>
+                                    Клієнт, який бажає отримати станцію в кредит від ТОКА, може легко звернутися до нас
+                                    і ми візьмемо на себе всю роботу щодо збору документів та заповнення опитувальників.
+                                    Найголовніше, щоб клієнт визначився з тим, яку саме станцію він бажає придбати в
+                                    кредит, і ми готові надати детальний розрахунок за допомогою калькулятора.</p>
+
+                                <br>
+
+                                <p>Умови кредитування:</p>
+
+                                <ul>
+                                    <li><p>Авансовий платіж від 20%</p></li>
+                                    <li><p>Термін кредитування до 5 років.</p></li>
+                                </ul>
+
+                                <br>
+
+                                <p>Ми докладаємо всіх зусиль, щоб зробити процес отримання кредиту максимально зручним
+                                    для клієнта, беручи на себе важливі етапи від збору документів до розрахунку
+                                    вартості. Завдяки нашій програмі, клієнти можуть скористатися доступними ставками та
+                                    гнучкими умовами фінансування для розвитку свого бізнесу з зарядними станціями для
+                                    електромобілів.</p>
+                            </div>
+                        </div>
+
+                        <div class="faqitem">
+                            <div class="faqitem__top" data-id="11">
+                                <h4 class="faqitem__title">Які методи платежів ви приймаєте?</h4>
+                            </div>
+
+                            <div class="faqitem__content" data-content="11">
+                                <p>Програма «Доступні кредити 5-7-9%» <br>
+                                    Клієнт, який бажає отримати станцію в кредит від ТОКА, може легко звернутися до нас
+                                    і ми візьмемо на себе всю роботу щодо збору документів та заповнення опитувальників.
+                                    Найголовніше, щоб клієнт визначився з тим, яку саме станцію він бажає придбати в
+                                    кредит, і ми готові надати детальний розрахунок за допомогою калькулятора.</p>
+
+                                <br>
+
+                                <p>Умови кредитування:</p>
+
+                                <ul>
+                                    <li><p>Авансовий платіж від 20%</p></li>
+                                    <li><p>Термін кредитування до 5 років.</p></li>
+                                </ul>
+
+                                <br>
+
+                                <p>Ми докладаємо всіх зусиль, щоб зробити процес отримання кредиту максимально зручним
+                                    для клієнта, беручи на себе важливі етапи від збору документів до розрахунку
+                                    вартості. Завдяки нашій програмі, клієнти можуть скористатися доступними ставками та
+                                    гнучкими умовами фінансування для розвитку свого бізнесу з зарядними станціями для
+                                    електромобілів.</p>
+                            </div>
+                        </div>
+
+
+                        <div class="faqitem">
+                            <div class="faqitem__top" data-id="12">
+                                <h4 class="faqitem__title">Чи можна заздалегідь зарезервувати місце на станції для
+                                    зарядки?</h4>
+                            </div>
+
+                            <div class="faqitem__content" data-content="12">
+                                <p>Програма «Доступні кредити 5-7-9%» <br>
+                                    Клієнт, який бажає отримати станцію в кредит від ТОКА, може легко звернутися до нас
+                                    і ми візьмемо на себе всю роботу щодо збору документів та заповнення опитувальників.
+                                    Найголовніше, щоб клієнт визначився з тим, яку саме станцію він бажає придбати в
+                                    кредит, і ми готові надати детальний розрахунок за допомогою калькулятора.</p>
+
+                                <br>
+
+                                <p>Умови кредитування:</p>
+
+                                <ul>
+                                    <li><p>Авансовий платіж від 20%</p></li>
+                                    <li><p>Термін кредитування до 5 років.</p></li>
+                                </ul>
+
+                                <br>
+
+                                <p>Ми докладаємо всіх зусиль, щоб зробити процес отримання кредиту максимально зручним
+                                    для клієнта, беручи на себе важливі етапи від збору документів до розрахунку
+                                    вартості. Завдяки нашій програмі, клієнти можуть скористатися доступними ставками та
+                                    гнучкими умовами фінансування для розвитку свого бізнесу з зарядними станціями для
+                                    електромобілів.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+@include('partials/footer.html')
+
+</body>
+
+</html>

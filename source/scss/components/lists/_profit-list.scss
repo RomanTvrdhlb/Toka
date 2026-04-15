@@ -1,0 +1,150 @@
+@use "../../mixins/breakpoint" as *;
+@use "../../mixins/mini" as *;
+
+.profit-list{
+	display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-radius: 20px;
+  overflow: hidden;
+
+  &__item{
+	position: relative;
+	z-index: 4;
+
+	background: var(--cl-b);
+	padding: 28px clamp(10px, 2.34375vw, 30px) clamp(10px, 2.1875vw, 28px) 28px;
+	gap: 40px;
+	display: flex;
+	flex-direction: column;
+	max-height: 286px;
+	min-height: clamp(200px, 22.34375vw, 286px);
+	height: 100%;
+	justify-content: space-between;
+
+	&:not(:last-of-type) {
+	  @include for-small-tablet {
+		border-right: 2px solid var(--background-screen);
+	  }
+	  @include small-tablet{
+		border-bottom: 2px solid var(--background-screen);
+	  }
+	}
+
+	p{
+	  color: var(--cl-s);
+	  font-size: 16px;
+	  font-style: normal;
+	  font-weight: 400;
+	  line-height: normal;
+
+	  @include ios{
+		max-width: 190px;
+	  }
+	}
+
+	&:nth-of-type(2){
+	  z-index: 3;
+	}
+
+	&:nth-of-type(3){
+	  z-index: 2;
+	}
+	&:last-of-type{
+	  z-index: 1;
+	}
+	&.mode{
+	  background: rgba(52, 195, 128, 0.10);
+
+	  .profit-list{
+
+		&__text{
+		  color: #16A562;
+		}
+	  }
+	}
+
+	@include tablet {
+	  @include for-small-tablet {
+		padding: 20px 6px 20px 20px;
+	  }
+	}
+
+	@include small-tablet{
+	  padding: 28px;
+	}
+
+	@include ios{
+	  min-height: 186px;
+	}
+  }
+
+  &__icon{
+	position: absolute;
+	top: 50%;
+	right: calc((clamp(32px, 3.75vw, 48px) / 2) * -1);
+	transform: translate(0%,-50%);
+	width: clamp(32px, 3.75vw, 48px);
+	z-index: 3;
+	height:   clamp(32px, 3.75vw, 48px);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 100%;
+	background: var(--background-screen);
+
+	.sprite{
+	  display: flex;
+	  width: clamp(10px, 1.015625vw, 13px);
+	  height: auto;
+
+	  svg,img{
+		width: 100%;
+		height: auto;
+	  }
+
+	  @include small-tablet{
+		width: 13px;
+	  }
+	}
+
+	@include small-tablet{
+	  width: 48px;
+	  height: 48px;
+	  right: 50%;
+	  top: initial;
+	  bottom: -24px;
+	  transform: translate(50%,0%);
+	}
+  }
+  &__top{
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+  }
+
+  &__text{
+	color: var(--cl-s);
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+  }
+
+  &__title{
+	color: var(--content-primary);
+	font-family: var(--third-family);
+
+	font-size: clamp(14px, 1.5625vw, 20px);
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+
+	@include small-tablet{
+	  font-size: clamp(18px, 1.5625vw, 20px);
+	}
+  }
+
+  @include small-tablet{
+	grid-template-columns: 100%;
+  }
+}

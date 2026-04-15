@@ -1,7 +1,122 @@
 @use "../mixins/breakpoint" as *;
-
 .mobile{
-  display: none;
+  position: absolute;
+
+
+  z-index: 58;
+  border-radius: 18px;
+  border: 1px solid #EBF0F2;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(16px);
+  padding: 24px;
+  gap: 32px;
+  display: flex;
+  flex-direction: column;
+
+  transition: all .4s;
+
+  &.active{
+    opacity: 1;
+    visibility: visible;
+    transform: translate(0) scale(1);
+  }
+
+  .burger{
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    z-index: 10;
+    @include for-small-tablet {
+      display: none;
+    }
+  }
+
+  .header-menu{
+    &__mob{
+      @include for-small-tablet {
+        display: none;
+      }
+    }
+    ul{
+      gap: 32px;
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+
+      a{
+        white-space: nowrap;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        text-align: start;
+        justify-content: flex-start;
+
+        @include small-tablet{
+          font-size: 20px;
+        }
+      }
+
+      @include small-tablet{
+        gap: 40px;
+      }
+    }
+
+    @include small-tablet{
+      flex-grow: 1;
+    }
+  }
+
+  .social{
+    @include for-small-tablet {
+      display: none;
+    }
+    @include small-tablet {
+      margin-top: 24px;
+      width: 100%;
+
+      li {
+        width: 25%;
+
+        a {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  @include for-small-tablet{
+    left: 0;
+    width: 228px;
+    transform: translateY(-50%) scale(0);
+    opacity: 0;
+    visibility: hidden;
+
+    top: calc(var(--header-height) + 8px);
+  }
+
+  @include small-tablet{
+    top: -16px;
+    height: 100dvh;
+    background: var(--cl-b);
+    overflow-y: auto;
+    border: none;
+    border-radius: 0;
+    right: 0;
+    transform: translateX(110%);
+    width: 100%;
+
+    .mobile{
+
+      &__box{
+        padding: 40px 0 0;
+        display: flex;
+        flex-grow: 1;
+        flex-direction: column;
+      }
+    }
+  }
 }
 //
 //.header-mobile {

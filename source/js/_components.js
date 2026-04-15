@@ -5,7 +5,7 @@ import './components/mobile-menu.js';
 // import './components/iti.js';
 // import './components/calendar.js';
 // import './components/fancybox.js';
-// import './components/select.js';
+import './components/select.js';
 import './components/acc.js';
 // import './components/anchor.js';
 // import './components/clip.js';

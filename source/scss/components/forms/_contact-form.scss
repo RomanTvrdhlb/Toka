@@ -39,7 +39,27 @@
 
   .input-item {
 	textarea {
-	  height: 187px;
+	  font-family: var(--font-family);
+	  font-weight: 400;
+	  font-size: 16px;
+	  color: var(--content-primary);
+	  height: 194px;
+	  width: 100%;
+	  padding: 20px;
+
+
+	  &::placeholder {
+		color: #62646A;
+		opacity: .8;
+	  }
+
+	  border: 1px solid transparent;
+	  border-radius: 16px;
+	  background: var(--cl-b);
+
+	  &:focus{
+		border-color: var(--cl-c);
+	  }
 	}
   }
 

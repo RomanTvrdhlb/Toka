@@ -1,0 +1,53 @@
+@use "../mixins/breakpoint" as *;
+
+.products-nav {
+  display: flex;
+  gap: 5px;
+  margin-top: clamp(8px, 1.25vw, 16px);
+
+  .products-btn {
+	border: none;
+	background: transparent;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	font-family: var(--second-family);
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 147%;
+	color: #62646a;
+	padding: 10px 21px;
+	border-radius: 34px;
+	transition: 0.23s;
+	text-align: left;
+	height: 47px;
+	white-space: nowrap;
+
+	&:hover {
+	  background: rgba(37, 40, 52, 0.04);
+	}
+
+	&.active {
+	  background: var(--content-primary);
+	  color: var(--content-alternative);
+
+	  svg {
+		path {
+		  fill: white;
+		}
+	  }
+	}
+  }
+
+  &::-webkit-scrollbar {
+	display: none;
+  }
+
+  @include tablet{
+	width: calc(100% + (var(--container-offset) * 2));
+	overflow-x: scroll;
+	justify-content: flex-start;
+	margin-left: calc(-1 * var(--container-offset));
+	padding: 0 var(--container-offset);
+  }
+}

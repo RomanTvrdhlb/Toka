@@ -1,0 +1,134 @@
+@use "../../mixins/breakpoint" as *;
+
+.owner-section {
+  padding: clamp(56px, 7.8125vw, 100px) 0 clamp(36px, 5.46875vw, 70px);
+  overflow: hidden;
+
+  .top {
+	justify-content: space-between;
+	flex-direction: row;
+	gap: 32px;
+	align-items: flex-start;
+
+	* {
+	  text-align: start;
+	}
+
+	.title-main {
+	  width: 100%;
+	  max-width: clamp(400px, 49.6875vw, 636px);
+
+	  @include small-tablet{
+		max-width: 550px;
+	  }
+	}
+
+	p {
+	  font-size: 16px;
+	  text-align: start;
+	  font-style: normal;
+	  font-weight: 500;
+	  line-height: normal;
+	  max-width: 300px;
+	  width: 100%;
+	}
+
+	@include small-tablet{
+	  flex-direction: column;
+	}
+  }
+
+  &__bottom {
+	margin-top: auto;
+	display: flex;
+	gap: clamp(24px, 7.578125vw, 97px);
+
+	@include small-tablet{
+	  flex-direction: column;
+	  gap: 24px;
+	}
+  }
+
+  &__item {
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+  }
+
+  &__text {
+	color: var(--cl-g);
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+  }
+
+  &__info {
+	color: var(--content-primary);
+	font-family: var(--third-family);
+	font-size: clamp(24px, 3.125vw, 40px);
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+  }
+
+  &__box {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	overflow: hidden;
+	border-radius: 20px;
+	background: var(--background-screen);
+	padding: clamp(24px, 4.6875vw, 60px) clamp(24px, 4.6875vw, 60px) clamp(32px, 4.6875vw, 60px);
+	position: relative;
+	z-index: 1;
+	min-height: clamp(400px, 42.34375vw, 542px);
+
+	&:before {
+	  content: '';
+	  width: 100%;
+	  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='861' height='542' fill='none' viewBox='0 0 861 542'%3E%3Cg filter='url(%23a)'%3E%3Cpath fill='%23c8d8fe' fill-opacity='.4' d='M1479.5 561c-217.9 195.567-195.43 453-509.969 453C654.988 1014 400 776.763 400 484.115 400 191.468 526.367-50 840.91-50c314.54 0 569.64 54.782 677.09 150.5s149.93 291.383-38.5 460.5'/%3E%3C/g%3E%3Cdefs%3E%3Cfilter id='a' width='2009.71' height='1864' x='0' y='-450' color-interpolation-filters='sRGB' filterUnits='userSpaceOnUse'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeBlend in='SourceGraphic' in2='BackgroundImageFix' result='shape'/%3E%3CfeGaussianBlur result='effect1_foregroundBlur_12983_26161' stdDeviation='200'/%3E%3C/filter%3E%3C/defs%3E%3C/svg%3E");
+	  height: 100%;
+	  z-index: -2;
+	  left: 0;
+	  bottom: 0;
+	  pointer-events: none;
+	  position: absolute;
+	  background-position: bottom right;
+	  background-repeat: no-repeat;
+	  background-size: cover;
+	}
+
+	@include small-tablet {
+	  gap: 32px;
+	  min-height: initial;
+	}
+  }
+
+
+  &__image {
+	display: flex;
+	flex-direction: row;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: clamp(300px, 34.375vw, 440px);
+	height: auto;
+	z-index: -1;
+	img, picture {
+
+	  width: 100%;
+	  height: auto;
+	}
+
+	@include mobile{
+	  width: 63%;
+	  right: -15%;
+	}
+
+	@media (max-width: 400px) {
+	  width: 70%;
+	  right: -20%;
+	}
+  }
+}

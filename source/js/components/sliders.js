@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   }
 
-  //
+
   // gallerySliders.forEach(function (slider) {
   //   const container = slider.querySelector(".swiper-container");
   //   const nextBtn = slider.querySelector(".next");

@@ -1,0 +1,120 @@
+@use "../../mixins/breakpoint" as *;
+@use "../../mixins/disable-mob-hover" as *;
+
+.default-section {
+  position: relative;
+  z-index: 1;
+
+  &__subtitle{
+    color: var(--content-primary);
+    text-align: center;
+    font-family: var(--third-family);
+    font-size: clamp(20px, 1.875vw, 24px);
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%;
+
+    @include small-tablet{
+      line-height: normal;
+    }
+  }
+
+  &__box{
+    color: var(--content-primary);
+    font-weight: 400;
+    line-height: normal;
+    font-size: 16px;
+    max-width: 956px;
+    width: 100%;
+    margin:  0 auto;
+
+    a{
+      font-size: 16px;
+      font-weight: 600;
+      transition: all .3s;
+
+      &:hover{
+        color: var(--cl-c);
+      }
+    }
+
+    h1 {
+      color: var(--content-primary);
+      font-family: var(--third-family);
+      font-size: clamp(28px, 3.59375vw, 46px);
+      font-style: normal;
+      font-weight: 600;
+      line-height: 114%;
+      margin-bottom: clamp(24px, 2.5vw, 32px);
+      @include mobile{
+        line-height: normal;
+      }
+    }
+    
+    h2 {
+      font-size: clamp(20px, 2.933vw, 24px);
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      margin-bottom: clamp(16px, 1.875vw, 24px);
+
+      & + p{
+        margin-bottom: clamp(32px, 3.4375vw, 44px);
+      }
+    }
+
+    h3 {
+      font-size: clamp(20px, 2.933vw, 24px);
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      margin-bottom: clamp(16px, 1.875vw, 24px);
+
+      & + p{
+        margin-bottom: clamp(16px, 1.875vw, 24px);
+      }
+    }
+
+    h4 {
+      font-size: clamp(18px, 2.533vw, 20px);
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      margin-bottom: clamp(16px, 1.875vw, 24px);
+
+      & + p{
+        margin-bottom: clamp(16px, 1.875vw, 24px);
+      }
+    }
+
+    h5 {
+      font-size: clamp(16px, 2.267vw, 18px);
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      margin-bottom: clamp(16px, 1.875vw, 24px);
+
+      & + p{
+        margin-bottom: clamp(16px, 1.875vw, 24px);
+      }
+    }
+
+    ul,ol{
+        margin-bottom: clamp(16px, 1.875vw, 24px);
+    }
+
+    p {
+      color: var(--content-primary);
+      font-size: 16px;
+
+    }
+  }
+
+  @include for-small-tablet{
+    padding: calc(var(--header-height) + 80px) 0 clamp(56px, 7.8125vw, 100px);
+  }
+
+  @include small-tablet{
+    padding: calc(var(--header-height) + 56px) 0 56px;
+  }
+}

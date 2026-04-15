@@ -17,12 +17,14 @@ const {
   header,
   activeClass,
   activeClassMode,
-  filterAside,
-  filterBtn,
-  filterClose,
+
 } = vars;
-const orderBlock = document.querySelector(".main-order");
-const filterWrapper = document.querySelector(".catalog-aside__open");
+// const orderBlock = document.querySelector(".main-order");
+// const filterWrapper = document.querySelector(".catalog-aside__open");
+
+const filterBtn = document.querySelector(".products-section__filter");
+const filterAside = document.querySelector(".products-section__filters");
+const filterClose = document.querySelector(".products-section__close");
 
 const mobileMenuHandler = function (overlay, mobileMenu, burger) {
   burger.forEach((btn) => {
@@ -129,72 +131,71 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  if (orderBlock) {
-    const wrapper = document.querySelector(".main-order-wrapper");
-
-    function toggleFixedBlock() {
-      const wrapperTop = wrapper.getBoundingClientRect().top;
-
-      if (wrapperTop > window.innerHeight - orderBlock.offsetHeight - 20) {
-        orderBlock.classList.add("show");
-      } else {
-        orderBlock.classList.remove("show");
-      }
-    }
-
-    toggleFixedBlock();
-    window.addEventListener("scroll", toggleFixedBlock);
-    window.addEventListener("resize", toggleFixedBlock);
-  }
-
-if (filterWrapper) {
-  let addTimeout = null;
-  let removeTimeout = null;
-  const addDelayMs = 200;
-  const removeAdvanceMs = 100;
-
-  const observer = new IntersectionObserver(
-    ([entry]) => {
-      const rectTop = entry.boundingClientRect.top;
-      const rectBottom = entry.boundingClientRect.bottom;
-
-      const isAbove = rectBottom < 0;
-      const isBelow = rectTop > window.innerHeight;
-
-      if (isAbove) {
-        if (removeTimeout) {
-          clearTimeout(removeTimeout);
-          removeTimeout = null;
-        }
-        if (!addTimeout) {
-          addTimeout = setTimeout(() => {
-            filterBtn.classList.add("fixed");
-            addTimeout = null;
-          }, addDelayMs);
-        }
-      } else {
-
-        if (!isBelow) {
-          if (addTimeout) {
-            clearTimeout(addTimeout);
-            addTimeout = null;
-          }
-          if (!removeTimeout) {
-            removeTimeout = setTimeout(() => {
-              filterBtn.classList.remove("fixed");
-              removeTimeout = null;
-            }, removeAdvanceMs);
-          }
-        }
-      }
-    },
-    {
-      root: null,
-      threshold: 0,
-    }
-  );
-
-  observer.observe(filterWrapper);
-}
-
+//   if (orderBlock) {
+//     const wrapper = document.querySelector(".main-order-wrapper");
+//
+//     function toggleFixedBlock() {
+//       const wrapperTop = wrapper.getBoundingClientRect().top;
+//
+//       if (wrapperTop > window.innerHeight - orderBlock.offsetHeight - 20) {
+//         orderBlock.classList.add("show");
+//       } else {
+//         orderBlock.classList.remove("show");
+//       }
+//     }
+//
+//     toggleFixedBlock();
+//     window.addEventListener("scroll", toggleFixedBlock);
+//     window.addEventListener("resize", toggleFixedBlock);
+//   }
+//
+// if (filterWrapper) {
+//   let addTimeout = null;
+//   let removeTimeout = null;
+//   const addDelayMs = 200;
+//   const removeAdvanceMs = 100;
+//
+//   const observer = new IntersectionObserver(
+//     ([entry]) => {
+//       const rectTop = entry.boundingClientRect.top;
+//       const rectBottom = entry.boundingClientRect.bottom;
+//
+//       const isAbove = rectBottom < 0;
+//       const isBelow = rectTop > window.innerHeight;
+//
+//       if (isAbove) {
+//         if (removeTimeout) {
+//           clearTimeout(removeTimeout);
+//           removeTimeout = null;
+//         }
+//         if (!addTimeout) {
+//           addTimeout = setTimeout(() => {
+//             filterBtn.classList.add("fixed");
+//             addTimeout = null;
+//           }, addDelayMs);
+//         }
+//       } else {
+//
+//         if (!isBelow) {
+//           if (addTimeout) {
+//             clearTimeout(addTimeout);
+//             addTimeout = null;
+//           }
+//           if (!removeTimeout) {
+//             removeTimeout = setTimeout(() => {
+//               filterBtn.classList.remove("fixed");
+//               removeTimeout = null;
+//             }, removeAdvanceMs);
+//           }
+//         }
+//       }
+//     },
+//     {
+//       root: null,
+//       threshold: 0,
+//     }
+//   );
+//
+//   observer.observe(filterWrapper);
+// }
 });

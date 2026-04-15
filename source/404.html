@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html')
+
+<body>
+@include('partials/header.html')
+<main class="main">
+    <section class="error-section">
+        <div class="container">
+            <div class="error-section__box">
+                <h1 class="error-section__title">404</h1>
+
+                <div class="error-section__inner">
+                    <h2 class="error-section__subtitle">Сторінку не знайдено</h2>
+
+                    <p>На жаль, за цією адресою нічого не знайдено. Можливо, посилання застаріло або в адресі припущено помилку</p>
+
+                    <a href="index.html" class="action-btn action-btn-v2">Перейти на головну</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+@include('partials/footer.html')
+
+</body>
+
+</html>

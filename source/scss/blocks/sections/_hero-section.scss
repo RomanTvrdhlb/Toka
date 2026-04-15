@@ -13,6 +13,12 @@
     padding: 0 18px;
   }
 
+  &:has( + .info-section){
+    .hero-section__inner{
+      max-width: clamp(600px, 51.875vw, 664px);
+    }
+  }
+
   &__inner{
     max-width: clamp(600px, 69.375vw, 888px);
     display: flex;

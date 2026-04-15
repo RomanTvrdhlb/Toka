@@ -40,8 +40,8 @@ if (header) {
         const headerBox = document.querySelector('.header__box');
         const mobile = document.querySelector('.mobile');
 
-        if (headerBox) headerBox.style.backdropFilter = 'blur(1.25rem)';
-        if (mobile) mobile.style.backdropFilter = 'blur(2.5rem)';
+        // if (headerBox) headerBox.style.backdropFilter = 'blur(12px)';
+        // if (mobile) mobile.style.backdropFilter = 'blur(16px)';
     }, delay);
 
 }

@@ -2,8 +2,12 @@
 @use "../mixins/burger" as *;
 @use "../mixins/disable-mob-hover" as *;
 
+header.open-menu ~ .overlay{
+  opacity: 0;
+  z-index: 50;
+}
 
-body:has(.hero-section.mode), body:has(.hero-section.about), body:has(.hero-section.app), body:has(.blog-section.author){
+body:has(.hero-section.mode),body:has(.error-section),body:has(.default-section), body:has(.hero-section.about), body:has(.hero-section.app), body:has(.blog-section.author), body:has(.contacts-section){
   .header{
     @include for-small-tablet{
       top: 32px;
@@ -68,7 +72,6 @@ body:has(.hero-section.mode), body:has(.hero-section.about), body:has(.hero-sect
     border-radius: 18px;
     border: 1px solid #EBF0F2;
     background: var(--cl-b);
-    backdrop-filter: blur(12px);
     padding: 14px;
     display: grid;
     grid-template-columns: repeat(2, auto) 1fr auto;
@@ -78,6 +81,10 @@ body:has(.hero-section.mode), body:has(.hero-section.about), body:has(.hero-sect
     width: 100%;
     margin: 0 auto;
     transition: 0.4s cubic-bezier(0.25, 0.1, 0.25, 1) 50ms;
+
+    @include for-small-tablet{
+      position: relative;
+    }
 
     @include small-tablet{
       grid-template-columns: 1fr repeat(2, auto);

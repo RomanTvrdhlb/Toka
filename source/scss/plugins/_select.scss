@@ -37,7 +37,7 @@
   user-select: none;
   width: 100%;
   min-width: 150px;
-  height: 39px;
+  height: 48px;
 
   .sprite {
     width: 24px;
@@ -57,22 +57,22 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 6px 11px 5px;
+    padding: 6px clamp(16px, 1.875vw, 24px) 5px;
     height: 100%;
     background: transparent;
     cursor: pointer;
-    height: 39px;
+    height: 48px;
     transition: all var(--transition-normal);
-    border: 0.5px solid var(--cl-m);
-    border-radius: 8px;
+    border: 1px solid #E0E3E9;
+    border-radius: 11px;
 
     &.active {
-      border-radius: 8px 8px 0 0;
-      background: #d8d9d2;
+      border-radius: 11px;
+      background: #fff;
     }
 
     &:hover {
-      background: rgba(241, 240, 235, 0.31);
+      border-color: var(--background-elevated-40);
     }
 
     &__icon {
@@ -102,29 +102,31 @@
     width: 100%;
     z-index: 2;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     row-gap: 6px;
   }
 
   .placeholder {
-    font-family: var(--third-family);
+    font-family: var(--font-family);
     font-weight: 400;
-    font-size: 14px;
-    text-align: center;
-    color: #322d29;
+    font-size: 16px;
+    text-align: start;
+    line-height: 100%;
+    color: var(--content-primary);
   }
 
   .arrow-down {
     display: flex;
-    height: 6px;
-    width: 10px;
+    height: 20px;
+    width: 20px;
+    margin: 0 -4px;
     color: inherit;
     transition: transform var(--transition-normal),
       color var(--transition-normal);
 
     svg {
       width: 100%;
-      height: auto;
+      height: 100%;
     }
   }
 
@@ -134,15 +136,14 @@
 
   .options-container {
     position: absolute;
-    top: 100%;
+    top: calc(100% + 8px);
     left: 0;
     width: 100%;
     max-height: 0;
     overflow: hidden;
-    background: #d8d9d2;
-    border: 0.5px solid var(--cl-m);
-    border-radius: 0px 0px 16px 16px;
-    box-shadow: 0px 4px 8px 0px rgba(142, 141, 208, 0.16);
+    background: #fff;
+    border: 1px solid #E0E3E9;
+    border-radius: 11px;
     z-index: 10;
     opacity: 0;
     transition: all var(--transition-normal);
@@ -166,7 +167,7 @@
 
   .options-container.active {
     opacity: 1;
-    max-height: 240px;
+    max-height: 500px;
     overflow-y: auto;
   }
 
@@ -186,14 +187,14 @@
 
   .option:not(.disabled) {
     @include hover {
-      background-color: var(--bg-l);
+      background-color: #F5F7FB;
     }
   }
 
   .option.active {
     pointer-events: none;
     .option-text {
-      background: rgba(241, 240, 235, 0.71);
+      color: var(--cl-c);
     }
   }
 
@@ -204,8 +205,8 @@
 
   .option-text {
     display: flex;
-    padding: 4px 24px 4px 16px;
-    justify-content: center;
+    padding: 16px 24px 16px 24px;
+    justify-content: flex-start;
     align-items: center;
     gap: 10px;
     width: 100%;
@@ -213,12 +214,9 @@
     transition: all 0.3s;
     font-style: normal;
     border-radius: 8px;
-    height: 34px;
-    font-family: var(--font3);
-    font-weight: 400;
-    font-size: 14px;
-    text-align: center;
-    color: var(--cl-n);
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--content-primary);
   }
 
   .selected-option {
@@ -240,11 +238,10 @@
     white-space: nowrap;
     text-overflow: ellipsis;
     transition: all 0.3s;
-    font-family: var(--third-family);
     font-weight: 400;
-    font-size: 14px;
-    text-align: center;
-    color: #322d29;
+    font-size: 16px;
+    text-align: start;
+    color: var(--content-primary);
   }
 
   .remove-btn {
@@ -282,304 +279,12 @@
     color: var(--primary-color);
   }
 
-  .placeholder {
-    font-family: var(--third-family);
-    font-weight: 400;
-    font-size: 14px;
-    text-align: center;
-    color: var(--cl-n);
-  }
-
   &.multiple {
     .selected-option {
       background-color: rgba(178, 197, 255, 0.2);
       border-radius: var(--radius-sm);
       padding: 2px var(--spacing-sm);
       margin-right: var(--spacing-xs);
-    }
-  }
-
-  &.lang {
-    display: flex;
-    align-items: center;
-    gap: 3px;
-
-    .select-text {
-      font-family: var(--second-family);
-      font-weight: 400;
-      font-size: 14px;
-      transition: all 0.3s;
-      color: var(--cl-b);
-    }
-
-    .options-container {
-      width: 52px;
-      left: initial;
-      right: 4px;
-    }
-  }
-
-  &.mode {
-    height: 29px;
-    width: fit-content;
-    min-width: 150px !important;
-
-    .select-icon {
-      width: 16px;
-      height: 12px;
-      display: flex;
-      align-self: center;
-      transition: all 0.2s;
-
-      .sprite {
-        width: 100%;
-        height: 100%;
-        transform: none;
-      }
-
-      svg {
-        width: 100%;
-        height: auto;
-      }
-    }
-
-    .selected-options {
-      column-gap: 10px;
-      width: fit-content;
-
-      .option-label {
-        font-family: var(--second-family);
-        font-weight: 400;
-        font-size: 14px;
-        color: var(--cl-a);
-      }
-    }
-
-    .placeholder {
-      font-family: var(--second-family);
-      color: var(--cl-a);
-    }
-
-    .select-field {
-      gap: 10px;
-      border-color: transparent;
-      padding: 0;
-      background: transparent;
-      height: 29px;
-    }
-  }
-
-  &.choice {
-    height: 55px;
-    align-items: center;
-    display: flex;
-    width: fit-content;
-    padding: 0 8px;
-    min-width: 96px;
-
-    .option-text {
-      padding: 4px 10px;
-      text-align: start;
-      transition: all 0.3s;
-      justify-content: flex-start;
-    }
-
-    .arrow-down {
-      width: 10px;
-      height: 10px;
-      color: var(--cl-b);
-      transition: all 0.3s;
-
-      svg {
-        transition: all 0.3s;
-        transform: scaleY(-1);
-      }
-    }
-
-    .select-icon {
-      width: 16px;
-      height: 12px;
-      display: flex;
-      align-self: center;
-      transition: all 0.2s;
-
-      .sprite {
-        width: 100%;
-        height: 100%;
-        transform: none;
-      }
-
-      svg {
-        width: 100%;
-        height: auto;
-      }
-    }
-
-    .selected-options {
-      column-gap: 10px;
-      width: fit-content;
-
-      .option-label {
-        font-family: var(--second-family);
-        font-weight: 400;
-        font-size: 14px;
-        color: var(--cl-b);
-      }
-    }
-
-    .placeholder {
-      font-family: var(--second-family);
-      color: var(--cl-b);
-    }
-
-    .select-field {
-      gap: 3px;
-      border-color: transparent;
-      padding: 0;
-      background: transparent;
-      height: 29px;
-    }
-  }
-
-  &.order {
-    height: 40px;
-    align-items: center;
-    display: flex;
-    width: fit-content;
-    gap: 10px;
-    width: 100%;
-
-    .selected-options {
-      justify-content: flex-start;
-
-      .selected-option {
-        width: 100%;
-      }
-
-      .option-label {
-        max-width: 90%;
-        font-family: var(--font-family);
-        font-weight: 400;
-        font-size: 16px;
-        text-align: center;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        display: block;
-        text-align: start;
-      }
-    }
-    .option-text {
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      display: flex;
-      text-align: start;
-      justify-content: flex-start;
-    }
-
-    .select-icon {
-      width: 25px;
-      height: 25px;
-      display: flex;
-      align-items: center;
-    }
-
-    .arrow-down {
-      flex-shrink: 0;
-    }
-
-    .select-field {
-      width: calc(100% - 40px);
-      gap: 3px;
-      border-color: transparent;
-      padding: 0;
-      background: transparent;
-      height: 40px;
-
-      * {
-        color: var(--cl-a);
-      }
-    }
-
-    .select-text {
-      color: var(--cl-a);
-    }
-
-    .arrow-down {
-      color: var(--cl-a);
-    }
-  }
-
-  &.cabinet {
-    height: clamp(34px, 2.0833vw, 40px);
-    border-radius: 14px;
-    align-items: center;
-    display: flex;
-    width: fit-content;
-
-    min-width: 143px;
-    padding: 0;
-    width: fit-content;
-
-    .option-text {
-      padding: 4px 10px;
-      text-align: start;
-      transition: all 0.3s;
-      justify-content: flex-start;
-    }
-
-    .arrow-down {
-      width: 10px;
-      height: 10px;
-      color: var(--cl-b);
-      transition: all 0.3s;
-
-      svg {
-        transition: all 0.3s;
-        transform: scaleY(-1);
-      }
-    }
-
-    .selected-options {
-      column-gap: 10px;
-      width: fit-content;
-
-      .option-label {
-        font-family: var(--second-family);
-        font-weight: 400;
-        font-size: 14px;
-        color: var(--cl-b);
-      }
-    }
-
-    .placeholder {
-      font-family: var(--second-family);
-      color: var(--cl-b);
-    }
-
-    .select-field {
-      gap: 10px;
-      border-color: transparent;
-      padding: 0;
-      border-radius: 14px;
-      background: #4f4f4f;
-      height: clamp(34px, 2.0833vw, 40px);
-         min-width: 143px;
-      padding: 0 14px 0 20px;
-
-      &.active {
-        border-radius: 14px 14px 0 0;
-        background: #d8d9d2;
-        border-color: var(--cl-m);
-
-        .arrow-down {
-          color: var(--cl-a);
-        }
-        .placeholder, .option-label{
-           color: var(--cl-a);
-        }
-      }
     }
   }
 }

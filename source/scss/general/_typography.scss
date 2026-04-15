@@ -83,3 +83,54 @@
 	letter-spacing: -0.56px;
   }
 }
+
+.social {
+
+  ul {
+	display: flex;
+	gap: 6px;
+	padding: 0;
+	width: 100%;
+	list-style: none !important;
+	padding: 0 !important;
+  }
+
+  li {
+	a {
+	  border-radius: 74px;
+	  border: 1px solid rgba(0, 0, 0, 0.10);
+	  width: clamp(63px, 6.40625vw, 82px);
+	  height: 51px;
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+	  transition: 0.23s;
+
+	  img,svg{
+		transition: all .23s;
+		filter: invert(1);
+	  }
+
+	  &:hover {
+		background-color: #222;
+		border-color: #222;
+
+		img,svg{
+		  filter: invert(0);
+		}
+	  }
+	}
+  }
+
+  @include mobile {
+	width: 100%;
+
+	li {
+	  width: 25%;
+
+	  a {
+		width: 100%;
+	  }
+	}
+  }
+}

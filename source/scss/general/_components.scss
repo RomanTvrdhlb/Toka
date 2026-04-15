@@ -1,11 +1,20 @@
 // ----------------- MAIN COMPONENTS -----------------
 //@use "../components/main-components/main-top";
 @use "../components/cards/product-card";
+@use "../components/cards/info-card";
+
 @use "../components/forms/contact-form";
+
 @use "../components/sliders/charging-slider";
+
 @use "../components/lists/main-list";
 @use "../components/lists/info-list";
 @use "../components/lists/blog-list";
+@use "../components/lists/credit-list";
+@use "../components/lists/location-list";
+@use "../components/lists/step-list";
+@use "../components/lists/profit-list";
+@use "../components/products-list";
 
 //@use "../components/order-form";
 //@use "../components/info-list";
@@ -14,6 +23,7 @@
 @use "../components/breadcrumbs";
 @use "../components/blog-card";
 @use "../components/blog-nav";
+@use "../components/products-nav";
 //@use "../components/team-slider";
 //@use "../components/info-slider";
 //@use "../components/gift-slider";

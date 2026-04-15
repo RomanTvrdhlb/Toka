@@ -1,0 +1,124 @@
+@use "../../mixins/breakpoint" as *;
+
+
+.credit-list {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(16px, 3.125vw, 40px);
+  counter-reset: li;
+
+
+  &__item {
+	display: grid;
+	gap: 40px clamp(24px, 3.125vw, 40px);
+	grid-template-columns: .95fr 1fr;
+	padding: clamp(24px, 3.125vw, 40px);
+	border-radius: 20px;
+	background: var(--background-screen);
+	counter-increment: li;
+
+	@include small-tablet{
+	  grid-template-columns: 100%;
+	}
+  }
+
+  &__box {
+	display: flex;
+	flex-direction: column;
+	gap: clamp(16px, 1.5625vw, 20px);
+
+	&:before {
+	  content: counter(li);
+	  color: var(--cl-c);
+	  text-align: center;
+	  font-family: var(--font-family);
+	  font-size: 24px;
+	  font-style: normal;
+	  font-weight: 800;
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
+	  line-height: 147%;
+	  margin-bottom: clamp(16px, 1.5625vw, 20px);
+	  border-radius: 100%;
+	  background: rgba(0, 113, 227, 0.08);
+	  width: 68px;
+	  height: 68px;
+	}
+
+
+  }
+
+  &__title {
+	color: var(--content-primar);
+	font-family: var(--third-family);
+	font-size: clamp(22px, 2.5vw, 32px);
+	font-style: normal;
+	font-weight: 500;
+	line-height: 138%;
+
+	@include mobile {
+	  line-height: normal;
+	}
+  }
+
+  &__day {
+	display: flex;
+	padding: 11px 20px;
+	justify-content: center;
+	align-items: center;
+	width: fit-content;
+	gap: 10px;
+	height: 44px;
+	border-radius: 35px;
+	border: 1px solid rgba(0, 113, 227, 0.10);
+	background: var(--cl-b);
+	color: var(--cl-c);
+	text-align: center;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+  }
+
+  &__sublist {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	border-radius: 16px;
+	background: var(--cl-b);
+	padding: clamp(16px, 2.34375vw, 30px);
+	min-height: 284px;
+
+	li {
+	  padding-left: 24px;
+	  position: relative;
+	  z-index: 1;
+
+	  &:before {
+		content: "";
+		background: var(--cl-c);
+		position: absolute;
+		top: 8px;
+		left: 0;
+		width: 8px;
+		height: 8px;
+		border-radius: 100%;
+	  }
+
+	  p, span {
+		color: var(--content-primary);
+		font-size: 16px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: normal;
+	  }
+
+	}
+
+	@include small-tablet{
+	  height: fit-content;
+	  min-height: initial;
+	}
+  }
+}

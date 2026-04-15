@@ -1,0 +1,365 @@
+@use "../../mixins/breakpoint" as *;
+
+.hero-section + .products-section {
+  padding: clamp(48px, 6.25vw, 80px) 0 clamp(56px, 6.25vw, 80px);
+}
+.products-section {
+  padding: var(--default-padding) 0;
+
+  &__box{
+	display: flex;
+	flex-direction: column;
+	gap: clamp(24px, 2.5vw, 32px);
+  }
+
+  &__filter{
+	color: var(--content-primary);
+	leading-trim: both;
+	text-edge: cap;
+	text-overflow: ellipsis;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 147%;
+	text-transform: capitalize;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	border-radius: 11px;
+	border: 1px solid #E0E3E9;
+	background: var(--cl-b);
+	padding: 10px 24px;
+	height: 48px;
+
+	.sprite{
+	  width: 14px;
+	  display: flex;
+	  height: 14px;
+
+	  svg{
+		width: 100%;
+		height: auto;
+	  }
+
+	  &:last-of-type{
+		width: 12px;
+		height: 12px;
+		margin-left: auto;
+	  }
+	}
+
+	span{
+	  overflow: hidden;
+	  color: var(--cl-b);
+	  text-overflow: ellipsis;
+	  font-size: 13px;
+	  font-style: normal;
+	  font-weight: 400;
+	  line-height: normal;
+	  border-radius: 100px;
+	  background: var(--cl-c);
+	  width: 20px;
+	  height: 20px;
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+	  text-transform: capitalize;
+	}
+
+
+
+	@include for-small-tablet{
+	  display: none;
+	}
+  }
+
+  &__top{
+	display: flex;
+	flex-direction: column;
+	gap: clamp(24px, 3.125vw, 40px);
+  }
+
+  &__reset{
+	color: var(--content-primary);
+	opacity: 0.67;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	letter-spacing: -0.56px;
+
+	@include  for-small-tablet{
+	  display: none;
+	}
+  }
+  &__close{
+	position: absolute;
+	top: 16px;
+	cursor: pointer;
+	right: 16px;
+	width: 24px;
+	height: 24px;
+	display: flex;
+	z-index: 20;
+	background: var(--cl-b);
+	border-radius: 100%;
+
+	svg{
+	  width: 100%;
+	  height: auto;
+	}
+	@include for-small-tablet{
+	  display: none;
+	}
+  }
+
+  &__options{
+	width: calc(100% + 48px);
+	overflow-x: scroll;
+	justify-content: flex-start;
+	margin-left: -24px;
+	padding: 0 24px;
+	gap: 6px;
+	display: flex;
+	align-items: center;
+	flex-wrap: nowrap;
+
+	button,a{
+	  border-radius: 20px;
+	  background: var(--background-screen);
+	  display: flex;
+	  padding: 7px 12px 7px 16px;
+	  justify-content: center;
+	  align-items: center;
+	  gap: 16px;
+	  color: var(--content-primary);
+	  height: 35px;
+	  font-size: 14px;
+	  flex-shrink: 0;
+	  font-style: normal;
+	  font-weight: 400;
+	  line-height: 147%;
+	  svg{
+		width: 16px;
+		height: 16px;
+	  }
+	}
+
+	@include for-small-tablet{
+	  display: none;
+	}
+  }
+  &__filters{
+	display: grid;
+	gap: clamp(8px, 1.25vw, 16px);
+	grid-template-columns: repeat(4, 1fr);
+
+	&-title{
+	  overflow: hidden;
+	  color: var(--content-primary);
+	  leading-trim: both;
+	  text-edge: cap;
+	  text-overflow: ellipsis;
+	  font-size: 16px;
+	  font-style: normal;
+	  font-weight: 600;
+	  line-height: 147%;
+	  text-transform: capitalize;
+	  display: flex;
+	  align-items: center;
+	  gap: 10px;
+
+	  b{
+		overflow: hidden;
+		color: var(--cl-b);
+		text-overflow: ellipsis;
+		font-size: 13px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: normal;
+		border-radius: 100px;
+		background: var(--cl-c);
+		margin-top: -2px;
+		width: 20px;
+		height: 20px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-transform: capitalize;
+	  }
+	}
+
+	&-top{
+	  display: flex;
+	  flex-direction: column;
+	  gap: 24px;
+	  margin-bottom: 16px;
+
+	  @include for-small-tablet{
+		display: none;
+	  }
+	}
+	&-box{
+	  display: flex;
+	  flex-direction: column;
+	  gap: 16px;
+
+	  @include for-small-tablet{
+		display: none;
+	  }
+	}
+
+	&-content{
+	  flex: 1 1 auto;
+	  min-height: 0;
+	  display: flex;
+	  flex-direction: column;
+	  gap: 8px;
+	  padding: 40px 24px 70px;
+	  overflow-y: auto;
+
+	  @include for-small-tablet{
+		display: contents;
+	  }
+	}
+	&-submit{
+	  position: absolute;
+	  bottom: 0;
+	  left: 0;
+	  right: 0;
+	  z-index: 3;
+	  padding: 4px 16px 32px;
+	  background: var(--cl-b);
+
+	  a,button{
+		width: 100%;
+		max-width: 440px;
+		margin: 0 auto;
+	  }
+
+	  @include for-small-tablet{
+		display: none;
+	  }
+	}
+
+	@include tablet{
+	  @include for-small-tablet {
+		.custom-select {
+		  .placeholder, .option-label {
+			font-size: 14px;
+		  }
+
+		  .select-field {
+			padding-left: 12px;
+			padding-right: 12px;
+		  }
+
+		  .option-text {
+			font-size: 14px;
+			padding: 10px 20px 10px 12px;
+		  }
+
+		  .options-container.active {
+			max-height: 300px;
+		  }
+		}
+	  }
+	}
+
+	@include small-tablet{
+	  position: fixed;
+	  bottom: 0;
+	  width: 100vw;
+	  left: 0;
+	  transition: transform 0.3s ease;
+	  transform: translateY(110%);
+	  top: 48px;
+	  height: calc(100vh - 48px);
+	  z-index: 60;
+	  padding: 0px 0 40px;
+	  background: var(--cl-b);
+	  border-radius: 20px 20px 0 0;
+	  display: flex;
+	  flex-direction: column;
+	  gap: 8px;
+
+	  min-height: 0;
+
+	  &:before{
+		content: '';
+		position: absolute;
+		top: 8px;
+		left: 50%;
+		transform: translateX(-50%);
+		z-index: 2;
+		width: 38px;
+		height: 5px;
+		border-radius: 100px;
+		opacity: 0.15;
+		background: #000;
+		pointer-events: none;
+	  }
+
+	  .custom-select{
+		height: initial;
+
+		.select-field{
+		  border: none;
+		  height: 48px;
+		  padding:12px 0;
+		}
+
+		.option-text{
+		  padding: 0;
+		  background: transparent !important;
+		}
+		.options-container{
+		  position: static;
+		  overflow: hidden !important;
+		  transition: all .01s;
+
+		  &::-webkit-scrollbar {
+			display: none;
+		  }
+		  border: none;
+			.option:first-of-type{
+			  margin-top: 8px;
+			}
+		  .option:not(:last-of-type){
+			margin-bottom: 32px;
+		  }
+		}
+		.options-container.active{
+
+		  max-height: 3000px !important;
+		}
+	  }
+	}
+
+	&.active {
+	  transform: translateY(0);
+	}
+  }
+
+  &__tabs{
+	.products-section__item{
+	  width: 100%;
+	}
+
+	& > .action-btn{
+	  margin: clamp(32px, 3.125vw, 40px) auto 0;
+	}
+
+	.products-list{
+	  @include tablet{
+		.products-list__item:nth-child(n+9) {
+		  display: none;
+		}
+	  }
+	}
+
+	.pagination{
+	  margin: 32px auto 0;
+	}
+  }
+}
